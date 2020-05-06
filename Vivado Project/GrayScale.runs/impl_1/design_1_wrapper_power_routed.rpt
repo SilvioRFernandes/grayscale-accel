@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Sun May  3 19:47:44 2020
-| Host             : silvio-pc running 64-bit Ubuntu 16.04.5 LTS
+| Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date             : Wed May  6 09:18:18 2020
+| Host             : DESKTOP-GSGJDCN running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
 | Device           : xczu3eg-sbva484-1-e
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.878        |
+| Total On-Chip Power (W)  | 1.879        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.564        |
+| Dynamic (W)              | 1.565        |
 | Device Static (W)        | 0.314        |
 | Effective TJA (C/W)      | 2.7          |
 | Max Ambient (C)          | 94.9         |
@@ -53,21 +53,21 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.013 |        3 |       --- |             --- |
-| CLB Logic                |     0.011 |    12520 |       --- |             --- |
-|   LUT as Logic           |     0.010 |     4950 |     70560 |            7.02 |
+| CLB Logic                |     0.011 |    12577 |       --- |             --- |
+|   LUT as Logic           |     0.010 |     4966 |     70560 |            7.04 |
 |   CARRY8                 |    <0.001 |       98 |      8820 |            1.11 |
 |   LUT as Shift Register  |    <0.001 |      220 |     28800 |            0.76 |
-|   Register               |    <0.001 |     5459 |    141120 |            3.87 |
+|   Register               |    <0.001 |     5495 |    141120 |            3.89 |
 |   LUT as Distributed RAM |    <0.001 |       64 |     28800 |            0.22 |
-|   Others                 |     0.000 |      312 |       --- |             --- |
+|   Others                 |     0.000 |      313 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |       32 |     70560 |            0.05 |
-| Signals                  |     0.011 |    10007 |       --- |             --- |
-| Block RAM                |     0.005 |       12 |       216 |            5.56 |
+| Signals                  |     0.011 |    10046 |       --- |             --- |
+| Block RAM                |     0.006 |       13 |       216 |            6.02 |
 | PS8                      |     1.524 |        1 |       --- |             --- |
 | Static Power             |     0.314 |          |           |                 |
 |   PS Static              |     0.099 |          |           |                 |
 |   PL Static              |     0.215 |          |           |                 |
-| Total                    |     1.878 |          |           |                 |
+| Total                    |     1.879 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -161,8 +161,8 @@ Table of Contents
 +------------------------+-----------+
 | Name                   | Power (W) |
 +------------------------+-----------+
-| design_1_wrapper       |     1.564 |
-|   design_1_i           |     1.564 |
+| design_1_wrapper       |     1.565 |
+|   design_1_i           |     1.565 |
 |     GrayScale_Accel_0  |     0.017 |
 |       inst             |     0.017 |
 |     axi_dma_0          |     0.008 |

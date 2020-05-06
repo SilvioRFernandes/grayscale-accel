@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:GrayScale_Accel:1.0
-// IP Revision: 8
+// IP Revision: 9
 
 (* X_CORE_INFO = "GrayScale_Accel_v1_0,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "design_1_GrayScale_Accel_0_0,GrayScale_Accel_v1_0,{}" *)

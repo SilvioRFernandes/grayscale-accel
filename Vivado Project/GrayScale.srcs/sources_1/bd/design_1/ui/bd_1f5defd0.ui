@@ -1,6 +1,6 @@
 {
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 TLS
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
 preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 3 -y 490 -defaultsOSRD
 preplace inst ps8_0_axi_periph -pg 1 -lvl 4 -y 150 -defaultsOSRD
@@ -8,16 +8,16 @@ preplace inst axi_dma_0 -pg 1 -lvl 5 -y 190 -defaultsOSRD
 preplace inst GrayScale_Accel_0 -pg 1 -lvl 6 -y 210 -defaultsOSRD
 preplace inst rst_ps8_0_100M -pg 1 -lvl 1 -y 620 -defaultsOSRD
 preplace inst axi_interconnect_0 -pg 1 -lvl 2 -y 460 -defaultsOSRD
-preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 6 20 510 400 610 740 400 1370 300 1690 330 2070
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 6 20 510 390 610 740 400 1360 300 1690 330 2060
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 3 1 1350
 preplace netloc GrayScale_Accel_0_M00_AXIS 1 4 3 1690 70 NJ 70 2360
-preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 3 1 1360
-preplace netloc rst_ps8_0_100M_peripheral_aresetn 1 1 5 420 290 NJ 290 1380 290 1700 320 2080
-preplace netloc rst_ps8_0_100M_interconnect_aresetn 1 1 3 390 110 NJ 110 NJ
-preplace netloc S00_AXI_1 1 1 5 440 310 NJ 310 NJ 310 NJ 310 2060
+preplace netloc rst_ps8_0_100M_peripheral_aresetn 1 1 5 410 290 NJ 290 1370 290 1700 320 2070
+preplace netloc rst_ps8_0_100M_interconnect_aresetn 1 1 3 380 110 NJ 110 NJ
 preplace netloc ps8_0_axi_periph_M00_AXI 1 4 1 N
+preplace netloc S00_AXI_1 1 1 5 430 310 NJ 310 NJ 310 NJ 310 2050
+preplace netloc S01_AXI_1 1 1 5 420 10 NJ 10 NJ 10 NJ 10 2070
 preplace netloc axi_interconnect_0_M00_AXI 1 2 1 N
-preplace netloc S01_AXI_1 1 1 5 430 10 NJ 10 NJ 10 NJ 10 2080
-preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 4 30 520 410J 620 NJ 620 1360
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 4 30 520 400J 620 NJ 620 1350
 preplace netloc axi_dma_0_M_AXIS_MM2S 1 5 1 N
 levelinfo -pg 1 0 210 590 1050 1540 1880 2220 2380 -top 0 -bot 720
 "
