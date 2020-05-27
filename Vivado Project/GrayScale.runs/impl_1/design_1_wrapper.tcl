@@ -69,17 +69,20 @@ set rc [catch {
   create_project -in_memory -part xczu3eg-sbva484-1-e
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/wt [current_project]
-  set_property parent.project_path /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.xpr [current_project]
-  set_property ip_repo_paths /home/silvio/PosDoc/Ultra96/GrayScale/ip_repo [current_project]
+  set_property webtalk.parent_dir {/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.cache/wt} [current_project]
+  set_property parent.project_path {/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.xpr} [current_project]
+  set_property ip_repo_paths {
+  /home/silvio/Pynq/Ultra96/grayscale-accel/ip_repo/GrayScale_Accel_2.0
+  {/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/ip_repo}
+} [current_project]
   update_ip_catalog
-  set_property ip_output_repo /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/ip [current_project]
+  set_property ip_output_repo {{/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet {{/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.runs/synth_1/design_1_wrapper.dcp}}
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd
+  add_files {{/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/design_1.bd}}
   set_param project.isImplRun false
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xczu3eg-sbva484-1-e

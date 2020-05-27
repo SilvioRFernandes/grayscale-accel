@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sun May  3 19:43:15 2020
+| Date         : Tue May 26 21:54:48 2020
 | Host         : silvio-pc running 64-bit Ubuntu 16.04.5 LTS
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -185,20 +185,22 @@ Table of Contents
 10. Black Boxes
 ---------------
 
-+------------------------------+------+
-|           Ref Name           | Used |
-+------------------------------+------+
-| design_1_zynq_ultra_ps_e_0_0 |    1 |
-| design_1_xbar_1              |    1 |
-| design_1_xbar_0              |    1 |
-| design_1_rst_ps8_0_100M_0    |    1 |
-| design_1_axi_dma_0_0         |    1 |
-| design_1_auto_us_1           |    1 |
-| design_1_auto_us_0           |    1 |
-| design_1_auto_pc_0           |    1 |
-| design_1_auto_ds_0           |    1 |
-| design_1_GrayScale_Accel_0_0 |    1 |
-+------------------------------+------+
++------------------------------------+------+
+|              Ref Name              | Used |
++------------------------------------+------+
+| design_1_zynq_ultra_ps_e_0_0       |    1 |
+| design_1_xbar_1                    |    1 |
+| design_1_xbar_0                    |    1 |
+| design_1_rst_ps8_0_100M_0          |    1 |
+| design_1_axis_dwidth_converter_1_0 |    1 |
+| design_1_axis_dwidth_converter_0_0 |    1 |
+| design_1_axi_dma_0_0               |    1 |
+| design_1_auto_us_1                 |    1 |
+| design_1_auto_us_0                 |    1 |
+| design_1_auto_pc_0                 |    1 |
+| design_1_auto_ds_0                 |    1 |
+| design_1_GrayScale_Accel_1_0       |    1 |
++------------------------------------+------+
 
 
 11. Instantiated Netlists

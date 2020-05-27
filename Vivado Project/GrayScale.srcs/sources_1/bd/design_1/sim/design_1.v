@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-//Date        : Sun May  3 19:38:41 2020
+//Date        : Tue May 26 21:49:59 2020
 //Host        : silvio-pc running 64-bit Ubuntu 16.04.5 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,14 +9,15 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=18,numReposBlks=10,numNonXlnxBlks=1,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=20,numReposBlks=12,numNonXlnxBlks=1,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_clkrst_cnt=6,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    ();
 
-  wire [31:0]GrayScale_Accel_0_M00_AXIS_TDATA;
-  wire GrayScale_Accel_0_M00_AXIS_TLAST;
-  wire GrayScale_Accel_0_M00_AXIS_TREADY;
-  wire GrayScale_Accel_0_M00_AXIS_TVALID;
+  wire [23:0]GrayScale_Accel_1_M00_AXIS_TDATA;
+  wire GrayScale_Accel_1_M00_AXIS_TLAST;
+  wire GrayScale_Accel_1_M00_AXIS_TREADY;
+  wire [2:0]GrayScale_Accel_1_M00_AXIS_TSTRB;
+  wire GrayScale_Accel_1_M00_AXIS_TVALID;
   wire [31:0]S00_AXI_1_ARADDR;
   wire [1:0]S00_AXI_1_ARBURST;
   wire [3:0]S00_AXI_1_ARCACHE;
@@ -47,6 +48,7 @@ module design_1
   wire [3:0]S01_AXI_1_WSTRB;
   wire S01_AXI_1_WVALID;
   wire [31:0]axi_dma_0_M_AXIS_MM2S_TDATA;
+  wire [3:0]axi_dma_0_M_AXIS_MM2S_TKEEP;
   wire axi_dma_0_M_AXIS_MM2S_TLAST;
   wire axi_dma_0_M_AXIS_MM2S_TREADY;
   wire axi_dma_0_M_AXIS_MM2S_TVALID;
@@ -87,6 +89,15 @@ module design_1
   wire axi_interconnect_0_M00_AXI_WREADY;
   wire [15:0]axi_interconnect_0_M00_AXI_WSTRB;
   wire axi_interconnect_0_M00_AXI_WVALID;
+  wire [23:0]axis_dwidth_converter_0_M_AXIS_TDATA;
+  wire axis_dwidth_converter_0_M_AXIS_TLAST;
+  wire axis_dwidth_converter_0_M_AXIS_TREADY;
+  wire axis_dwidth_converter_0_M_AXIS_TVALID;
+  wire [31:0]axis_dwidth_converter_1_M_AXIS_TDATA;
+  wire [3:0]axis_dwidth_converter_1_M_AXIS_TKEEP;
+  wire axis_dwidth_converter_1_M_AXIS_TLAST;
+  wire axis_dwidth_converter_1_M_AXIS_TREADY;
+  wire axis_dwidth_converter_1_M_AXIS_TVALID;
   wire [39:0]ps8_0_axi_periph_M00_AXI_ARADDR;
   wire ps8_0_axi_periph_M00_AXI_ARREADY;
   wire ps8_0_axi_periph_M00_AXI_ARVALID;
@@ -147,20 +158,21 @@ module design_1
   wire zynq_ultra_ps_e_0_pl_clk0;
   wire zynq_ultra_ps_e_0_pl_resetn0;
 
-  design_1_GrayScale_Accel_0_0 GrayScale_Accel_0
+  design_1_GrayScale_Accel_1_0 GrayScale_Accel_1
        (.m00_axis_aclk(zynq_ultra_ps_e_0_pl_clk0),
         .m00_axis_aresetn(rst_ps8_0_100M_peripheral_aresetn),
-        .m00_axis_tdata(GrayScale_Accel_0_M00_AXIS_TDATA),
-        .m00_axis_tlast(GrayScale_Accel_0_M00_AXIS_TLAST),
-        .m00_axis_tready(GrayScale_Accel_0_M00_AXIS_TREADY),
-        .m00_axis_tvalid(GrayScale_Accel_0_M00_AXIS_TVALID),
+        .m00_axis_tdata(GrayScale_Accel_1_M00_AXIS_TDATA),
+        .m00_axis_tlast(GrayScale_Accel_1_M00_AXIS_TLAST),
+        .m00_axis_tready(GrayScale_Accel_1_M00_AXIS_TREADY),
+        .m00_axis_tstrb(GrayScale_Accel_1_M00_AXIS_TSTRB),
+        .m00_axis_tvalid(GrayScale_Accel_1_M00_AXIS_TVALID),
         .s00_axis_aclk(zynq_ultra_ps_e_0_pl_clk0),
         .s00_axis_aresetn(rst_ps8_0_100M_peripheral_aresetn),
-        .s00_axis_tdata(axi_dma_0_M_AXIS_MM2S_TDATA),
-        .s00_axis_tlast(axi_dma_0_M_AXIS_MM2S_TLAST),
-        .s00_axis_tready(axi_dma_0_M_AXIS_MM2S_TREADY),
-        .s00_axis_tstrb({1'b1,1'b1,1'b1,1'b1}),
-        .s00_axis_tvalid(axi_dma_0_M_AXIS_MM2S_TVALID));
+        .s00_axis_tdata(axis_dwidth_converter_0_M_AXIS_TDATA),
+        .s00_axis_tlast(axis_dwidth_converter_0_M_AXIS_TLAST),
+        .s00_axis_tready(axis_dwidth_converter_0_M_AXIS_TREADY),
+        .s00_axis_tstrb({1'b1,1'b1,1'b1}),
+        .s00_axis_tvalid(axis_dwidth_converter_0_M_AXIS_TVALID));
   design_1_axi_dma_0_0 axi_dma_0
        (.axi_resetn(rst_ps8_0_100M_peripheral_aresetn),
         .m_axi_mm2s_aclk(zynq_ultra_ps_e_0_pl_clk0),
@@ -195,6 +207,7 @@ module design_1
         .m_axi_s2mm_wstrb(S01_AXI_1_WSTRB),
         .m_axi_s2mm_wvalid(S01_AXI_1_WVALID),
         .m_axis_mm2s_tdata(axi_dma_0_M_AXIS_MM2S_TDATA),
+        .m_axis_mm2s_tkeep(axi_dma_0_M_AXIS_MM2S_TKEEP),
         .m_axis_mm2s_tlast(axi_dma_0_M_AXIS_MM2S_TLAST),
         .m_axis_mm2s_tready(axi_dma_0_M_AXIS_MM2S_TREADY),
         .m_axis_mm2s_tvalid(axi_dma_0_M_AXIS_MM2S_TVALID),
@@ -215,11 +228,11 @@ module design_1
         .s_axi_lite_wdata(ps8_0_axi_periph_M00_AXI_WDATA),
         .s_axi_lite_wready(ps8_0_axi_periph_M00_AXI_WREADY),
         .s_axi_lite_wvalid(ps8_0_axi_periph_M00_AXI_WVALID),
-        .s_axis_s2mm_tdata(GrayScale_Accel_0_M00_AXIS_TDATA),
-        .s_axis_s2mm_tkeep({1'b1,1'b1,1'b1,1'b1}),
-        .s_axis_s2mm_tlast(GrayScale_Accel_0_M00_AXIS_TLAST),
-        .s_axis_s2mm_tready(GrayScale_Accel_0_M00_AXIS_TREADY),
-        .s_axis_s2mm_tvalid(GrayScale_Accel_0_M00_AXIS_TVALID));
+        .s_axis_s2mm_tdata(axis_dwidth_converter_1_M_AXIS_TDATA),
+        .s_axis_s2mm_tkeep(axis_dwidth_converter_1_M_AXIS_TKEEP),
+        .s_axis_s2mm_tlast(axis_dwidth_converter_1_M_AXIS_TLAST),
+        .s_axis_s2mm_tready(axis_dwidth_converter_1_M_AXIS_TREADY),
+        .s_axis_s2mm_tvalid(axis_dwidth_converter_1_M_AXIS_TVALID));
   design_1_axi_interconnect_0_0 axi_interconnect_0
        (.ACLK(zynq_ultra_ps_e_0_pl_clk0),
         .ARESETN(rst_ps8_0_100M_interconnect_aresetn),
@@ -295,6 +308,31 @@ module design_1
         .S01_AXI_wready(S01_AXI_1_WREADY),
         .S01_AXI_wstrb(S01_AXI_1_WSTRB),
         .S01_AXI_wvalid(S01_AXI_1_WVALID));
+  design_1_axis_dwidth_converter_0_0 axis_dwidth_converter_0
+       (.aclk(zynq_ultra_ps_e_0_pl_clk0),
+        .aresetn(rst_ps8_0_100M_peripheral_aresetn),
+        .m_axis_tdata(axis_dwidth_converter_0_M_AXIS_TDATA),
+        .m_axis_tlast(axis_dwidth_converter_0_M_AXIS_TLAST),
+        .m_axis_tready(axis_dwidth_converter_0_M_AXIS_TREADY),
+        .m_axis_tvalid(axis_dwidth_converter_0_M_AXIS_TVALID),
+        .s_axis_tdata(axi_dma_0_M_AXIS_MM2S_TDATA),
+        .s_axis_tkeep(axi_dma_0_M_AXIS_MM2S_TKEEP),
+        .s_axis_tlast(axi_dma_0_M_AXIS_MM2S_TLAST),
+        .s_axis_tready(axi_dma_0_M_AXIS_MM2S_TREADY),
+        .s_axis_tvalid(axi_dma_0_M_AXIS_MM2S_TVALID));
+  design_1_axis_dwidth_converter_1_0 axis_dwidth_converter_1
+       (.aclk(zynq_ultra_ps_e_0_pl_clk0),
+        .aresetn(rst_ps8_0_100M_peripheral_aresetn),
+        .m_axis_tdata(axis_dwidth_converter_1_M_AXIS_TDATA),
+        .m_axis_tkeep(axis_dwidth_converter_1_M_AXIS_TKEEP),
+        .m_axis_tlast(axis_dwidth_converter_1_M_AXIS_TLAST),
+        .m_axis_tready(axis_dwidth_converter_1_M_AXIS_TREADY),
+        .m_axis_tvalid(axis_dwidth_converter_1_M_AXIS_TVALID),
+        .s_axis_tdata(GrayScale_Accel_1_M00_AXIS_TDATA),
+        .s_axis_tlast(GrayScale_Accel_1_M00_AXIS_TLAST),
+        .s_axis_tready(GrayScale_Accel_1_M00_AXIS_TREADY),
+        .s_axis_tstrb(GrayScale_Accel_1_M00_AXIS_TSTRB),
+        .s_axis_tvalid(GrayScale_Accel_1_M00_AXIS_TVALID));
   design_1_ps8_0_axi_periph_0 ps8_0_axi_periph
        (.ACLK(zynq_ultra_ps_e_0_pl_clk0),
         .ARESETN(rst_ps8_0_100M_interconnect_aresetn),
