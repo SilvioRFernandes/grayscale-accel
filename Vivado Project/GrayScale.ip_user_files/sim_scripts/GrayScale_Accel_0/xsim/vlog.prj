@@ -1,0 +1,10 @@
+sv xil_defaultlib  \
+"../../../../ip_repo/GrayScale_Accel_1.0/GrayScale_Accel_0/src/axis_fifo_v1_0.sv" \
+"../../../../ip_repo/GrayScale_Accel_1.0/GrayScale_Accel_0/hdl/GrayScale_Accel_v1_0.v" \
+
+verilog xil_defaultlib  \
+"../../../../ip_repo/GrayScale_Accel_1.0/GrayScale_Accel_0/sim/GrayScale_Accel_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

@@ -1,0 +1,744 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue May 26 21:50:32 2020
+# Process ID: 22653
+# Current directory: /home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.runs/design_1_axis_dwidth_converter_1_0_synth_1
+# Command line: vivado -log design_1_axis_dwidth_converter_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axis_dwidth_converter_1_0.tcl
+# Log file: /home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.runs/design_1_axis_dwidth_converter_1_0_synth_1/design_1_axis_dwidth_converter_1_0.vds
+# Journal file: /home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.runs/design_1_axis_dwidth_converter_1_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_axis_dwidth_converter_1_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/silvio/Pynq/Ultra96/grayscale-accel/ip_repo/GrayScale_Accel_2.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.3/data/ip'.
+Command: synth_design -top design_1_axis_dwidth_converter_1_0 -part xczu3eg-sbva484-1-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 22673 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1397.793 ; gain = 36.871 ; free physical = 1404 ; free virtual = 13078
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_dwidth_converter_1_0' [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ip/design_1_axis_dwidth_converter_1_0/synth/design_1_axis_dwidth_converter_1_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'axis_dwidth_converter_v1_1_17_axis_dwidth_converter' [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/4ca6/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:810]
+	Parameter C_FAMILY bound to: zynquplus - type: string 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000010111 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_SS_TKEEP_REQUIRED bound to: 8 - type: integer 
+	Parameter P_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000011111 
+	Parameter P_S_RATIO bound to: 4 - type: integer 
+	Parameter P_M_RATIO bound to: 3 - type: integer 
+	Parameter P_D2_TDATA_WIDTH bound to: 96 - type: integer 
+	Parameter P_D1_TUSER_WIDTH bound to: 3 - type: integer 
+	Parameter P_D2_TUSER_WIDTH bound to: 12 - type: integer 
+	Parameter P_D3_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter P_D1_REG_CONFIG bound to: 0 - type: integer 
+	Parameter P_D3_REG_CONFIG bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'axis_dwidth_converter_v1_1_17_axisc_upsizer' [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/4ca6/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:437]
+	Parameter C_FAMILY bound to: zynquplus - type: string 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 96 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TUSER_WIDTH bound to: 3 - type: integer 
+	Parameter C_M_AXIS_TUSER_WIDTH bound to: 12 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000011111 
+	Parameter C_RATIO bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_READY_EXIST bound to: 1'b1 
+	Parameter P_DATA_EXIST bound to: 1'b1 
+	Parameter P_STRB_EXIST bound to: 1'b1 
+	Parameter P_KEEP_EXIST bound to: 1'b1 
+	Parameter P_LAST_EXIST bound to: 1'b1 
+	Parameter P_ID_EXIST bound to: 1'b0 
+	Parameter P_DEST_EXIST bound to: 1'b0 
+	Parameter P_USER_EXIST bound to: 1'b0 
+	Parameter P_S_AXIS_TSTRB_WIDTH bound to: 3 - type: integer 
+	Parameter P_M_AXIS_TSTRB_WIDTH bound to: 12 - type: integer 
+	Parameter SM_RESET bound to: 3'b000 
+	Parameter SM_IDLE bound to: 3'b001 
+	Parameter SM_ACTIVE bound to: 3'b101 
+	Parameter SM_END bound to: 3'b011 
+	Parameter SM_END_TO_ACTIVE bound to: 3'b010 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/4ca6/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:525]
+INFO: [Synth 8-6155] done synthesizing module 'axis_dwidth_converter_v1_1_17_axisc_upsizer' (1#1) [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/4ca6/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:437]
+INFO: [Synth 8-6157] synthesizing module 'axis_dwidth_converter_v1_1_17_axisc_downsizer' [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/4ca6/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:62]
+	Parameter C_FAMILY bound to: zynquplus - type: string 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 96 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXIS_TUSER_WIDTH bound to: 12 - type: integer 
+	Parameter C_M_AXIS_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000011111 
+	Parameter C_RATIO bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_S_AXIS_TSTRB_WIDTH bound to: 12 - type: integer 
+	Parameter P_M_AXIS_TSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter P_RATIO_WIDTH bound to: 2 - type: integer 
+	Parameter SM_RESET bound to: 3'b000 
+	Parameter SM_IDLE bound to: 3'b001 
+	Parameter SM_ACTIVE bound to: 3'b010 
+	Parameter SM_END bound to: 3'b011 
+	Parameter SM_END_TO_ACTIVE bound to: 3'b110 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/4ca6/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:139]
+INFO: [Synth 8-6155] done synthesizing module 'axis_dwidth_converter_v1_1_17_axisc_downsizer' (2#1) [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/4ca6/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'axis_register_slice_v1_1_18_axis_register_slice' [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/af00/hdl/axis_register_slice_v1_1_vl_rfs.v:2260]
+	Parameter C_FAMILY bound to: zynquplus - type: string 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 3 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000011111 
+	Parameter C_REG_CONFIG bound to: 0 - type: integer 
+	Parameter C_NUM_SLR_CROSSINGS bound to: 0 - type: integer 
+	Parameter C_PIPELINES_MASTER bound to: 0 - type: integer 
+	Parameter C_PIPELINES_SLAVE bound to: 0 - type: integer 
+	Parameter C_PIPELINES_MIDDLE bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TPAYLOAD_WIDTH bound to: 31 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+	Parameter C_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 3 - type: integer 
+	Parameter C_TPAYLOAD_WIDTH bound to: 31 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 32'b00000000000000000000000000011111 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TDATA_INDX bound to: 0 - type: integer 
+	Parameter P_TSTRB_INDX bound to: 24 - type: integer 
+	Parameter P_TKEEP_INDX bound to: 27 - type: integer 
+	Parameter P_TLAST_INDX bound to: 30 - type: integer 
+	Parameter P_TID_INDX bound to: 31 - type: integer 
+	Parameter P_TDEST_INDX bound to: 31 - type: integer 
+	Parameter P_TUSER_INDX bound to: 31 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' (3#1) [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+INFO: [Synth 8-6157] synthesizing module 'axis_register_slice_v1_1_18_axisc_register_slice' [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/af00/hdl/axis_register_slice_v1_1_vl_rfs.v:1448]
+	Parameter C_FAMILY bound to: zynquplus - type: string 
+	Parameter C_DATA_WIDTH bound to: 31 - type: integer 
+	Parameter C_REG_CONFIG bound to: 0 - type: integer 
+	Parameter C_NUM_SLR_CROSSINGS bound to: 0 - type: integer 
+	Parameter C_PIPELINES_MASTER bound to: 0 - type: integer 
+	Parameter C_PIPELINES_SLAVE bound to: 0 - type: integer 
+	Parameter C_PIPELINES_MIDDLE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axis_register_slice_v1_1_18_axisc_register_slice' (4#1) [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/af00/hdl/axis_register_slice_v1_1_vl_rfs.v:1448]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+	Parameter C_TDATA_WIDTH bound to: 24 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 3 - type: integer 
+	Parameter C_TPAYLOAD_WIDTH bound to: 31 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 32'b00000000000000000000000000011111 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TDATA_INDX bound to: 0 - type: integer 
+	Parameter P_TSTRB_INDX bound to: 24 - type: integer 
+	Parameter P_TKEEP_INDX bound to: 27 - type: integer 
+	Parameter P_TLAST_INDX bound to: 30 - type: integer 
+	Parameter P_TID_INDX bound to: 31 - type: integer 
+	Parameter P_TDEST_INDX bound to: 31 - type: integer 
+	Parameter P_TUSER_INDX bound to: 31 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' (5#1) [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+INFO: [Synth 8-6155] done synthesizing module 'axis_register_slice_v1_1_18_axis_register_slice' (6#1) [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/af00/hdl/axis_register_slice_v1_1_vl_rfs.v:2260]
+INFO: [Synth 8-6157] synthesizing module 'axis_register_slice_v1_1_18_axis_register_slice__parameterized0' [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/af00/hdl/axis_register_slice_v1_1_vl_rfs.v:2260]
+	Parameter C_FAMILY bound to: zynquplus - type: string 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000011111 
+	Parameter C_REG_CONFIG bound to: 0 - type: integer 
+	Parameter C_NUM_SLR_CROSSINGS bound to: 0 - type: integer 
+	Parameter C_PIPELINES_MASTER bound to: 0 - type: integer 
+	Parameter C_PIPELINES_SLAVE bound to: 0 - type: integer 
+	Parameter C_PIPELINES_MIDDLE bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TPAYLOAD_WIDTH bound to: 41 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector__parameterized0' [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+	Parameter C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_TPAYLOAD_WIDTH bound to: 41 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 32'b00000000000000000000000000011111 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TDATA_INDX bound to: 0 - type: integer 
+	Parameter P_TSTRB_INDX bound to: 32 - type: integer 
+	Parameter P_TKEEP_INDX bound to: 36 - type: integer 
+	Parameter P_TLAST_INDX bound to: 40 - type: integer 
+	Parameter P_TID_INDX bound to: 41 - type: integer 
+	Parameter P_TDEST_INDX bound to: 41 - type: integer 
+	Parameter P_TUSER_INDX bound to: 41 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector__parameterized0' (6#1) [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+INFO: [Synth 8-6157] synthesizing module 'axis_register_slice_v1_1_18_axisc_register_slice__parameterized0' [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/af00/hdl/axis_register_slice_v1_1_vl_rfs.v:1448]
+	Parameter C_FAMILY bound to: zynquplus - type: string 
+	Parameter C_DATA_WIDTH bound to: 41 - type: integer 
+	Parameter C_REG_CONFIG bound to: 0 - type: integer 
+	Parameter C_NUM_SLR_CROSSINGS bound to: 0 - type: integer 
+	Parameter C_PIPELINES_MASTER bound to: 0 - type: integer 
+	Parameter C_PIPELINES_SLAVE bound to: 0 - type: integer 
+	Parameter C_PIPELINES_MIDDLE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axis_register_slice_v1_1_18_axisc_register_slice__parameterized0' (6#1) [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/af00/hdl/axis_register_slice_v1_1_vl_rfs.v:1448]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis__parameterized0' [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+	Parameter C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_TPAYLOAD_WIDTH bound to: 41 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 32'b00000000000000000000000000011111 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TDATA_INDX bound to: 0 - type: integer 
+	Parameter P_TSTRB_INDX bound to: 32 - type: integer 
+	Parameter P_TKEEP_INDX bound to: 36 - type: integer 
+	Parameter P_TLAST_INDX bound to: 40 - type: integer 
+	Parameter P_TID_INDX bound to: 41 - type: integer 
+	Parameter P_TDEST_INDX bound to: 41 - type: integer 
+	Parameter P_TUSER_INDX bound to: 41 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis__parameterized0' (6#1) [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+INFO: [Synth 8-6155] done synthesizing module 'axis_register_slice_v1_1_18_axis_register_slice__parameterized0' (6#1) [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/af00/hdl/axis_register_slice_v1_1_vl_rfs.v:2260]
+INFO: [Synth 8-6155] done synthesizing module 'axis_dwidth_converter_v1_1_17_axis_dwidth_converter' (7#1) [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/4ca6/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:810]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_dwidth_converter_1_0' (8#1) [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ip/design_1_axis_dwidth_converter_1_0/synth/design_1_axis_dwidth_converter_1_0.v:57]
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_18_axisc_register_slice__parameterized0 has unconnected port ACLK
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_18_axisc_register_slice__parameterized0 has unconnected port ACLK2X
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_18_axisc_register_slice__parameterized0 has unconnected port ARESET
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_18_axisc_register_slice__parameterized0 has unconnected port ACLKEN
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TID[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TDEST[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[3]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[2]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[1]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector__parameterized0 has unconnected port TUSER[0]
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_18_axisc_register_slice has unconnected port ACLK
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_18_axisc_register_slice has unconnected port ACLK2X
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_18_axisc_register_slice has unconnected port ARESET
+WARNING: [Synth 8-3331] design axis_register_slice_v1_1_18_axisc_register_slice has unconnected port ACLKEN
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TID[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TDEST[0]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TUSER[2]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TUSER[1]
+WARNING: [Synth 8-3331] design axis_infrastructure_v1_1_0_util_axis2vector has unconnected port TUSER[0]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_17_axis_dwidth_converter has unconnected port s_axis_tkeep[2]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_17_axis_dwidth_converter has unconnected port s_axis_tkeep[1]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_17_axis_dwidth_converter has unconnected port s_axis_tkeep[0]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_17_axis_dwidth_converter has unconnected port s_axis_tuser[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1443.543 ; gain = 82.621 ; free physical = 1390 ; free virtual = 13064
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1443.543 ; gain = 82.621 ; free physical = 1387 ; free virtual = 13061
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1443.543 ; gain = 82.621 ; free physical = 1387 ; free virtual = 13061
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ip/design_1_axis_dwidth_converter_1_0/design_1_axis_dwidth_converter_1_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ip/design_1_axis_dwidth_converter_1_0/design_1_axis_dwidth_converter_1_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.runs/design_1_axis_dwidth_converter_1_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.runs/design_1_axis_dwidth_converter_1_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2319.438 ; gain = 0.000 ; free physical = 280 ; free virtual = 12057
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2319.438 ; gain = 0.000 ; free physical = 280 ; free virtual = 12057
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2319.438 ; gain = 0.000 ; free physical = 278 ; free virtual = 12056
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 2319.438 ; gain = 958.516 ; free physical = 363 ; free virtual = 12141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 2319.438 ; gain = 958.516 ; free physical = 363 ; free virtual = 12140
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  {/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.runs/design_1_axis_dwidth_converter_1_0_synth_1/dont_touch.xdc}, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 2319.438 ; gain = 958.516 ; free physical = 361 ; free virtual = 12139
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'state_reg' through user attribute
+INFO: [Synth 8-5544] ROM "r0_reg_sel0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "r0_reg_sel0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'state_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 2319.438 ; gain = 958.516 ; free physical = 342 ; free virtual = 12120
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               96 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               24 Bit    Registers := 5     
+	               12 Bit    Registers := 3     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 18    
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 15    
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 6     
+	   3 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 6     
+	   3 Input      2 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module axis_dwidth_converter_v1_1_17_axisc_upsizer 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 5     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 16    
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 5     
+	   3 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+Module axis_dwidth_converter_v1_1_17_axisc_downsizer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               96 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	               12 Bit    Registers := 3     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
+Module axis_register_slice_v1_1_18_axis_register_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module axis_register_slice_v1_1_18_axis_register_slice__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module axis_dwidth_converter_v1_1_17_axis_dwidth_converter 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'gen_upsizer_conversion.axisc_upsizer_0/r0_dest_reg[0:0]' into 'gen_upsizer_conversion.axisc_upsizer_0/r0_id_reg[0:0]' [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/4ca6/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:707]
+INFO: [Synth 8-4471] merging register 'gen_upsizer_conversion.axisc_upsizer_0/acc_dest_reg[0:0]' into 'gen_upsizer_conversion.axisc_upsizer_0/acc_id_reg[0:0]' [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/4ca6/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:725]
+INFO: [Synth 8-4471] merging register 'gen_downsizer_conversion.axisc_downsizer_0/r0_dest_reg[0:0]' into 'gen_downsizer_conversion.axisc_downsizer_0/r0_id_reg[0:0]' [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/4ca6/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:292]
+INFO: [Synth 8-4471] merging register 'gen_downsizer_conversion.axisc_downsizer_0/r1_dest_reg[0:0]' into 'gen_downsizer_conversion.axisc_downsizer_0/r1_id_reg[0:0]' [/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/ipshared/4ca6/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:292]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_17_axis_dwidth_converter has unconnected port s_axis_tkeep[2]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_17_axis_dwidth_converter has unconnected port s_axis_tkeep[1]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_17_axis_dwidth_converter has unconnected port s_axis_tkeep[0]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_17_axis_dwidth_converter has unconnected port s_axis_tid[0]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_17_axis_dwidth_converter has unconnected port s_axis_tdest[0]
+WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_17_axis_dwidth_converter has unconnected port s_axis_tuser[0]
+INFO: [Synth 8-3886] merging instance 'inst/gen_upsizer_conversion.axisc_upsizer_0/r0_keep_reg[2]' (FDE) to 'inst/gen_upsizer_conversion.axisc_upsizer_0/r0_keep_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_upsizer_conversion.axisc_upsizer_0/r0_keep_reg[1]' (FDE) to 'inst/gen_upsizer_conversion.axisc_upsizer_0/r0_keep_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\gen_upsizer_conversion.axisc_upsizer_0/r0_keep_reg[0] )
+INFO: [Synth 8-3886] merging instance 'inst/gen_upsizer_conversion.axisc_upsizer_0/gen_data_accumulator[2].acc_keep_reg[8]' (FDRE) to 'inst/gen_upsizer_conversion.axisc_upsizer_0/gen_data_accumulator[2].acc_keep_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_upsizer_conversion.axisc_upsizer_0/acc_keep_reg[9]' (FDRE) to 'inst/gen_upsizer_conversion.axisc_upsizer_0/acc_keep_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_upsizer_conversion.axisc_upsizer_0/acc_keep_reg[10]' (FDRE) to 'inst/gen_upsizer_conversion.axisc_upsizer_0/acc_keep_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_upsizer_conversion.axisc_upsizer_0/gen_data_accumulator[1].acc_keep_reg[4]' (FDRE) to 'inst/gen_upsizer_conversion.axisc_upsizer_0/gen_data_accumulator[1].acc_keep_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_keep_reg[8]' (FDE) to 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_keep_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_upsizer_conversion.axisc_upsizer_0/acc_keep_reg[0]' (FDE) to 'inst/gen_upsizer_conversion.axisc_upsizer_0/acc_keep_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_upsizer_conversion.axisc_upsizer_0/gen_data_accumulator[1].acc_keep_reg[5]' (FDRE) to 'inst/gen_upsizer_conversion.axisc_upsizer_0/gen_data_accumulator[1].acc_keep_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_keep_reg[9]' (FDE) to 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_keep_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_upsizer_conversion.axisc_upsizer_0/acc_keep_reg[1]' (FDE) to 'inst/gen_upsizer_conversion.axisc_upsizer_0/acc_keep_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_upsizer_conversion.axisc_upsizer_0/gen_data_accumulator[2].acc_keep_reg[6]' (FDRE) to 'inst/gen_upsizer_conversion.axisc_upsizer_0/gen_data_accumulator[2].acc_keep_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_keep_reg[10]' (FDE) to 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_keep_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_keep_reg[4]' (FDE) to 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_keep_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_keep_reg[0]' (FDE) to 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_keep_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_keep_reg[5]' (FDE) to 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_keep_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_keep_reg[1]' (FDE) to 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_keep_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_keep_reg[6]' (FDE) to 'inst/gen_downsizer_conversion.axisc_downsizer_0/r0_keep_reg[7]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\gen_upsizer_conversion.axisc_upsizer_0/acc_keep_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\gen_downsizer_conversion.axisc_downsizer_0/r0_keep_reg[2] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 2319.438 ; gain = 958.516 ; free physical = 370 ; free virtual = 12150
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:01:04 . Memory (MB): peak = 2586.289 ; gain = 1225.367 ; free physical = 126 ; free virtual = 10933
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:01:04 . Memory (MB): peak = 2610.320 ; gain = 1249.398 ; free physical = 155 ; free virtual = 10920
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:01:05 . Memory (MB): peak = 2618.328 ; gain = 1257.406 ; free physical = 151 ; free virtual = 10915
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:01:05 . Memory (MB): peak = 2618.328 ; gain = 1257.406 ; free physical = 147 ; free virtual = 10913
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:01:05 . Memory (MB): peak = 2618.328 ; gain = 1257.406 ; free physical = 147 ; free virtual = 10913
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:01:05 . Memory (MB): peak = 2618.328 ; gain = 1257.406 ; free physical = 147 ; free virtual = 10913
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:01:05 . Memory (MB): peak = 2618.328 ; gain = 1257.406 ; free physical = 147 ; free virtual = 10913
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:01:05 . Memory (MB): peak = 2618.328 ; gain = 1257.406 ; free physical = 147 ; free virtual = 10914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:01:05 . Memory (MB): peak = 2618.328 ; gain = 1257.406 ; free physical = 147 ; free virtual = 10914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     2|
+|2     |LUT2 |     7|
+|3     |LUT3 |     3|
+|4     |LUT4 |    11|
+|5     |LUT5 |    80|
+|6     |LUT6 |    19|
+|7     |FDRE |   309|
+|8     |FDSE |     1|
++------+-----+------+
+
+Report Instance Areas: 
++------+-------------------------------------------------+----------------------------------------------------+------+
+|      |Instance                                         |Module                                              |Cells |
++------+-------------------------------------------------+----------------------------------------------------+------+
+|1     |top                                              |                                                    |   432|
+|2     |  inst                                           |axis_dwidth_converter_v1_1_17_axis_dwidth_converter |   432|
+|3     |    \gen_downsizer_conversion.axisc_downsizer_0  |axis_dwidth_converter_v1_1_17_axisc_downsizer       |   264|
+|4     |    \gen_upsizer_conversion.axisc_upsizer_0      |axis_dwidth_converter_v1_1_17_axisc_upsizer         |   166|
++------+-------------------------------------------------+----------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:01:05 . Memory (MB): peak = 2618.328 ; gain = 1257.406 ; free physical = 147 ; free virtual = 10914
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:48 . Memory (MB): peak = 2618.328 ; gain = 381.512 ; free physical = 226 ; free virtual = 10992
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:01:05 . Memory (MB): peak = 2618.336 ; gain = 1257.406 ; free physical = 249 ; free virtual = 11016
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2620.328 ; gain = 0.000 ; free physical = 143 ; free virtual = 10882
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+69 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:01:08 . Memory (MB): peak = 2620.328 ; gain = 1259.535 ; free physical = 260 ; free virtual = 11001
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2620.328 ; gain = 0.000 ; free physical = 260 ; free virtual = 11001
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.runs/design_1_axis_dwidth_converter_1_0_synth_1/design_1_axis_dwidth_converter_1_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axis_dwidth_converter_1_0, cache-ID = f7c4bf663625c241
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2644.340 ; gain = 0.000 ; free physical = 254 ; free virtual = 11006
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/silvio/Pynq/Ultra96/grayscale-accel/Vivado Project/GrayScale.runs/design_1_axis_dwidth_converter_1_0_synth_1/design_1_axis_dwidth_converter_1_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_axis_dwidth_converter_1_0_utilization_synth.rpt -pb design_1_axis_dwidth_converter_1_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue May 26 21:51:56 2020...
