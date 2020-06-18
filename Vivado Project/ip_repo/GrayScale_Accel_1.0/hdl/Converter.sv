@@ -22,7 +22,7 @@
 
 module Converter(
     input logic[23:0] vet,
-    output logic[8:0] result
+    output logic[7:0] result
     );
     
     assign ConvertR = vet[7:0] * 299;

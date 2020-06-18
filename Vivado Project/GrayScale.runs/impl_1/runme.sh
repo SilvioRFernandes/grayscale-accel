@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/thor/Downloads/grayscale-accel-Test_24bits/Vivado Project/GrayScale.runs/impl_1'
+HD_PWD='C:/Users/thor/Documents/ProjetoPesquisa/GitProject/grayscale-accel/Vivado Project/GrayScale.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

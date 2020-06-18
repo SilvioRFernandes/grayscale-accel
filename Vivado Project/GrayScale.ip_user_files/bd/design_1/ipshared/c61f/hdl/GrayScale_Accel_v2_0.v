@@ -213,8 +213,8 @@
         // State variable                                                                    
         reg [1:0] mst_exec_state;                                                         
         //logic [C_AXIS_TDATA_WIDTH-1: 0] R, G, B,ConvertR, ConvertG, ConvertB,S;
-	logic [C_AXIS_TDATA_WIDTH-1: 0] vector;
-	logic [7: 0] S;
+	logic [C_AXIS_TDATA_WIDTH-1: 0] ConvertR, ConvertG, ConvertB;
+	logic [7: 0] R, G, B, S;
         reg [1:0]     count;
         
     logic rd_fifo, wr_fifo;
@@ -261,14 +261,17 @@
 				//count <= count + 1;
                                 //rd_fifo <= 1;
                                 //wr_fifo <= 0;
+                                
                                 s_s00_axis_tlast <= 0;
 
-				mst_exec_state  <= SEND_STREAM;
-				vector <= s_m00_axis_tdata;
-				count <= 0;
-				islast <= s_m00_axis_tlast;
+				                mst_exec_state  <= SEND_STREAM;
+				                B <= s_m00_axis_tdata[23:16];
+				                G <= s_m00_axis_tdata[15:8];
+				                R <= s_m00_axis_tdata[7:0];
+				                count <= 0;
+				                islast <= s_m00_axis_tlast;
                                 rd_fifo <= 0;
-                                wr_fifo <= 0;      
+                                wr_fifo <= 0;         
                                 
                             end
                             /*1: begin
@@ -322,11 +325,11 @@
     end
  //end
  
-    Converter gray(
-        .vet(vector),
-        .result(S)
-    );
-    
+    assign ConvertR = R * 299;
+    assign ConvertG = G * 587;
+    assign ConvertB = B * 114;
+     
+    assign S = (ConvertR+ConvertG+ConvertB)/1000;
     
     
 	// User logic ends

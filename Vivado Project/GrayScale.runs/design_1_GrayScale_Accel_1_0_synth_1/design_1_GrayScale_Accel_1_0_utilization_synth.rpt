@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Jun 16 18:54:14 2020
+| Date         : Thu Jun 18 19:15:52 2020
 | Host         : DESKTOP-GSGJDCN running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_GrayScale_Accel_1_0_utilization_synth.rpt -pb design_1_GrayScale_Accel_1_0_utilization_synth.pb
 | Design       : design_1_GrayScale_Accel_1_0
@@ -31,13 +31,13 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| CLB LUTs*               |  172 |     0 |     70560 |  0.24 |
-|   LUT as Logic          |  172 |     0 |     70560 |  0.24 |
+| CLB LUTs*               |  266 |     0 |     70560 |  0.38 |
+|   LUT as Logic          |  266 |     0 |     70560 |  0.38 |
 |   LUT as Memory         |    0 |     0 |     28800 |  0.00 |
-| CLB Registers           |  272 |     0 |    141120 |  0.19 |
-|   Register as Flip Flop |  272 |     0 |    141120 |  0.19 |
+| CLB Registers           |  281 |     0 |    141120 |  0.20 |
+|   Register as Flip Flop |  281 |     0 |    141120 |  0.20 |
 |   Register as Latch     |    0 |     0 |    141120 |  0.00 |
-| CARRY8                  |    0 |     0 |      8820 |  0.00 |
+| CARRY8                  |   10 |     0 |      8820 |  0.11 |
 | F7 Muxes                |    0 |     0 |     35280 |  0.00 |
 | F8 Muxes                |    0 |     0 |     17640 |  0.00 |
 | F9 Muxes                |    0 |     0 |      8820 |  0.00 |
@@ -60,7 +60,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 6     |          Yes |         Set |            - |
-| 266   |          Yes |       Reset |            - |
+| 275   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -70,9 +70,9 @@ Table of Contents
 +-------------------+------+-------+-----------+-------+
 |     Site Type     | Used | Fixed | Available | Util% |
 +-------------------+------+-------+-----------+-------+
-| Block RAM Tile    |    4 |     0 |       216 |  1.85 |
-|   RAMB36/FIFO*    |    4 |     0 |       216 |  1.85 |
-|     RAMB36E2 only |    4 |       |           |       |
+| Block RAM Tile    |    6 |     0 |       216 |  2.78 |
+|   RAMB36/FIFO*    |    6 |     0 |       216 |  2.78 |
+|     RAMB36E2 only |    6 |       |           |       |
 |   RAMB18          |    0 |     0 |       432 |  0.00 |
 +-------------------+------+-------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E2 or one FIFO18E2. However, if a FIFO18E2 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E2
@@ -81,11 +81,12 @@ Table of Contents
 3. ARITHMETIC
 -------------
 
-+-----------+------+-------+-----------+-------+
-| Site Type | Used | Fixed | Available | Util% |
-+-----------+------+-------+-----------+-------+
-| DSPs      |    0 |     0 |       360 |  0.00 |
-+-----------+------+-------+-----------+-------+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |    3 |     0 |       360 |  0.83 |
+|   DSP48E2 only |    3 |       |           |       |
++----------------+------+-------+-----------+-------+
 
 
 4. I/O
@@ -148,15 +149,17 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  266 |            Register |
-| LUT6     |   73 |                 CLB |
-| LUT3     |   57 |                 CLB |
-| LUT5     |   47 |                 CLB |
-| LUT4     |   31 |                 CLB |
-| LUT2     |   20 |                 CLB |
-| LUT1     |   12 |                 CLB |
+| FDRE     |  275 |            Register |
+| LUT6     |   94 |                 CLB |
+| LUT3     |   84 |                 CLB |
+| LUT5     |   58 |                 CLB |
+| LUT4     |   55 |                 CLB |
+| LUT2     |   55 |                 CLB |
+| LUT1     |   18 |                 CLB |
+| CARRY8   |   10 |                 CLB |
+| RAMB36E2 |    6 |           Block Ram |
 | FDSE     |    6 |            Register |
-| RAMB36E2 |    4 |           Block Ram |
+| DSP48E2  |    3 |          Arithmetic |
 +----------+------+---------------------+
 
 
