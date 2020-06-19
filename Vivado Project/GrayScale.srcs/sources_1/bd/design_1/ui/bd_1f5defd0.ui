@@ -16,8 +16,8 @@ preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 7 20 140 380 40 720 100 1350 330 1
 preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 3 1 1330
 preplace netloc rst_ps8_0_100M_peripheral_aresetn 1 1 6 390 340 NJ 340 1360 300 1700 330 2060 490 2310
 preplace netloc rst_ps8_0_100M_interconnect_aresetn 1 1 3 370 30 NJ 30 1340J
-preplace netloc S00_AXI_1 1 1 5 390 10 NJ 10 NJ 10 NJ 10 2070
 preplace netloc ps8_0_axi_periph_M00_AXI 1 4 1 N
+preplace netloc S00_AXI_1 1 1 5 390 10 NJ 10 NJ 10 NJ 10 2070
 preplace netloc axi_interconnect_0_M00_AXI 1 2 1 N
 preplace netloc S01_AXI_1 1 1 5 400 20 NJ 20 NJ 20 NJ 20 2050
 preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 4 20 350 NJ 350 NJ 350 1340

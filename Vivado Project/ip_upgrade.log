@@ -1,6 +1,27 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Jun 18 19:12:03 2020
+| Host         : DESKTOP-GSGJDCN running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_GrayScale_Accel_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_GrayScale_Accel_1_0 (user.org:user:GrayScale_Accel:2.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 | Date         : Tue Jun 16 18:51:28 2020
 | Host         : DESKTOP-GSGJDCN running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

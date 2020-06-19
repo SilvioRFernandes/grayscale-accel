@@ -1,9 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Tue Jun 16 18:54:14 2020
+// Date        : Thu Jun 18 19:15:52 2020
 // Host        : DESKTOP-GSGJDCN running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub {C:/Users/thor/Downloads/grayscale-accel-Test_24bits/Vivado
+// Command     : write_verilog -force -mode synth_stub
+//               {C:/Users/thor/Documents/ProjetoPesquisa/GitProject/grayscale-accel/Vivado
 //               Project/GrayScale.srcs/sources_1/bd/design_1/ip/design_1_GrayScale_Accel_1_0/design_1_GrayScale_Accel_1_0_stub.v}
 // Design      : design_1_GrayScale_Accel_1_0
 // Purpose     : Stub declaration of top-level module interface
