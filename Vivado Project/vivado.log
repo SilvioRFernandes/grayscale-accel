@@ -1,29 +1,33 @@
 #-----------------------------------------------------------
 # Vivado v2018.3 (64-bit)
-# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun May  3 19:00:47 2020
-# Process ID: 32452
-# Current directory: /home/silvio/PosDoc/Ultra96/GrayScale
-# Command line: vivado
-# Log file: /home/silvio/PosDoc/Ultra96/GrayScale/vivado.log
-# Journal file: /home/silvio/PosDoc/Ultra96/GrayScale/vivado.jou
+# Start of session at: Mon Aug 23 14:17:11 2021
+# Process ID: 27924
+# Current directory: C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5112 C:\Users\silvi\Documents\Projetos\grayscale-accel-pipe\Vivado Project\GrayScale.xpr
+# Log file: C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project/vivado.log
+# Journal file: C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.xpr
+open_project {C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project/GrayScale.xpr}
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/ip_repo/GrayScale_Accel_1.0'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.3/data/ip'.
-WARNING: [BD 41-1661] One or more IPs have been locked in the design 'resizer.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
-List of locked IPs:
-resizer_GrayScale_Accel_0_0
-
-open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 6405.797 ; gain = 91.500 ; free physical = 2673 ; free virtual = 10603
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_2.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_2.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:34 ; elapsed = 00:00:25 . Memory (MB): peak = 776.449 ; gain = 181.113
 update_compile_order -fileset sources_1
-open_bd_design {/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/resizer.bd}
+save_project_as EuclideanDistance {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project} -force
+import_files
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+open_bd_design {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/design_1.bd}
 Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+WARNING: [BD 41-1282] Ignoring parameter HAS_BURST
+WARNING: [BD 41-1281] Parameter HAS_BURST is not defined on /axi_dma_0/M_AXIS_MM2S. Setting parameter on /axi_dma_0/M_AXIS_MM2S failed
 Adding cell -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
 Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
 Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
@@ -34,340 +38,365 @@ Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
 Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
 Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps8_0_100M
 Adding cell -- xilinx.com:ip:zynq_ultra_ps_e:3.2 - zynq_ultra_ps_e_0
-Adding cell -- user.org:user:GrayScale_Accel:1.0 - GrayScale_Accel_0
-Successfully read diagram <resizer> from BD file </home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/resizer.bd>
-open_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 6567.707 ; gain = 0.000 ; free physical = 2560 ; free virtual = 10506
-report_ip_status -name ip_status 
-ipx::edit_ip_in_project -upgrade true -name GrayScale_Accel_v1_0_project -directory /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.tmp/GrayScale_Accel_v1_0_project /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/ip_repo/GrayScale_Accel_1.0/component.xml
+Adding cell -- xilinx.com:ip:axis_dwidth_converter:1.1 - axis_dwidth_converter_0
+Adding cell -- xilinx.com:ip:axis_dwidth_converter:1.1 - axis_dwidth_converter_1
+Adding cell -- xilinx.com:user:GrayScale_Accel_pipe:2.0 - GrayScale_Accel_pipe_0
+Successfully read diagram <design_1> from BD file <C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 865.094 ; gain = 18.047
+ipx::edit_ip_in_project -upgrade true -name GrayScale_Accel_pipe_v2_0_project -directory {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado\ Project/EuclideanDistance.tmp/GrayScale_Accel_pipe_v2_0_project} c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_2.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/silvi/documents/projetos/euclidean-distance/vivado project/euclideandistance.tmp/grayscale_accel_pipe_v2_0_project'
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 914.074 ; gain = 0.000
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/ip_repo/GrayScale_Accel_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_2.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_2.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project/ip_repo'.
 INFO: [IP_Flow 19-795] Syncing license key meta-data
-WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/ip_repo/GrayScale_Accel_1.0/src/axis_fifo_v1_0.sv:]
-WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/ip_repo/GrayScale_Accel_1.0/hdl/GrayScale_Accel_v1_0.v:]
-ipx::edit_ip_in_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 6567.707 ; gain = 0.000 ; free physical = 2423 ; free virtual = 10386
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_2.0/hdl/GrayScale_Accel_pipe_v2_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_2.0/src/axis_fifo_v1_0.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_2.0/hdl/GrayScale_Accel_pipe_v2_0.v:]
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 948.273 ; gain = 34.199
 update_compile_order -fileset sources_1
 close_project
-upgrade_ip -vlnv user.org:user:GrayScale_Accel:1.0 [get_ips  resizer_GrayScale_Accel_0_0] -log ip_upgrade.log
-Upgrading '/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/resizer.bd'
-INFO: [IP_Flow 19-3422] Upgraded resizer_GrayScale_Accel_0_0 (GrayScale_Accel_v1.0 1.0) from revision 6 to revision 7
-Wrote  : </home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/resizer.bd> 
-Wrote  : </home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/ui/bd_9716589e.ui> 
-INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/ip_upgrade.log'.
-export_ip_user_files -of_objects [get_ips resizer_GrayScale_Accel_0_0] -no_script -sync -force -quiet
-generate_target all [get_files  /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/resizer.bd]
-WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
-WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
-WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/xbar/M00_AXI(0)
-WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/xbar/M00_AXI(0)
-Wrote  : </home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/resizer.bd> 
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_bid'(1) to net 'xbar_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_rid'(1) to net 'xbar_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_awid'(6) to net 'axi_interconnect_0_M00_AXI_AWID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_arid'(6) to net 'axi_interconnect_0_M00_AXI_ARID'(1) - Only lower order bits will be connected.
-VHDL Output written to : /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/synth/resizer.v
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_bid'(1) to net 'xbar_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_rid'(1) to net 'xbar_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_awid'(6) to net 'axi_interconnect_0_M00_AXI_AWID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_arid'(6) to net 'axi_interconnect_0_M00_AXI_ARID'(1) - Only lower order bits will be connected.
-VHDL Output written to : /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/sim/resizer.v
-VHDL Output written to : /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/hdl/resizer_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/xbar .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_100M .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block GrayScale_Accel_0 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/ip/resizer_auto_us_0/resizer_auto_us_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_us .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/ip/resizer_auto_us_1/resizer_auto_us_1_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s01_couplers/auto_us .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/ip/resizer_auto_ds_0/resizer_auto_ds_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_ds .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/ip/resizer_auto_pc_0/resizer_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
-Exporting to file /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/hw_handoff/resizer.hwh
-Generated Block Design Tcl file /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/hw_handoff/resizer_bd.tcl
-Generated Hardware Definition File /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/synth/resizer.hwdef
-generate_target: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 6724.832 ; gain = 0.000 ; free physical = 2252 ; free virtual = 10201
-catch { config_ip_cache -export [get_ips -all resizer_GrayScale_Accel_0_0] }
-catch { config_ip_cache -export [get_ips -all resizer_auto_us_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP resizer_auto_us_0, cache-ID = 90e01a699f071929; cache size = 19.436 MB.
-catch { config_ip_cache -export [get_ips -all resizer_auto_us_1] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP resizer_auto_us_1, cache-ID = b83ee42a5b572fe6; cache size = 19.436 MB.
-catch { config_ip_cache -export [get_ips -all resizer_auto_ds_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP resizer_auto_ds_0, cache-ID = ca8f071eaf6d2418; cache size = 19.436 MB.
-catch { config_ip_cache -export [get_ips -all resizer_auto_pc_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP resizer_auto_pc_0, cache-ID = dc6ef21bff7973e7; cache size = 19.436 MB.
-export_ip_user_files -of_objects [get_files /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/resizer.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/resizer.bd]
-launch_runs -jobs 2 resizer_GrayScale_Accel_0_0_synth_1
-[Sun May  3 19:04:17 2020] Launched resizer_GrayScale_Accel_0_0_synth_1...
-Run output will be captured here: /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.runs/resizer_GrayScale_Accel_0_0_synth_1/runme.log
-launch_runs: Time (s): cpu = 00:00:00.68 ; elapsed = 00:00:10 . Memory (MB): peak = 6724.832 ; gain = 0.000 ; free physical = 2047 ; free virtual = 10029
-export_simulation -of_objects [get_files /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/resizer.bd] -directory /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.ip_user_files/sim_scripts -ip_user_files_dir /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.ip_user_files -ipstatic_source_dir /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.cache/compile_simlib/modelsim} {questa=/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.cache/compile_simlib/questa} {ies=/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.cache/compile_simlib/ies} {xcelium=/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.cache/compile_simlib/xcelium} {vcs=/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.cache/compile_simlib/vcs} {riviera=/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
-report_ip_status -name ip_status 
-validate_bd_design -force
-WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
-WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
-WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/xbar/M00_AXI(0)
-WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/xbar/M00_AXI(0)
-validate_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 6850.051 ; gain = 0.000 ; free physical = 1882 ; free virtual = 9883
-report_ip_status -name ip_status 
-save_bd_design
-Wrote  : </home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/resizer.bd> 
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-INFO: [BD 41-1662] The design 'resizer.bd' is already validated. Therefore parameter propagation will not be re-run.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_bid'(1) to net 'xbar_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_rid'(1) to net 'xbar_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_awid'(6) to net 'axi_interconnect_0_M00_AXI_AWID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_arid'(6) to net 'axi_interconnect_0_M00_AXI_ARID'(1) - Only lower order bits will be connected.
-VHDL Output written to : /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/synth/resizer.v
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_bid'(1) to net 'xbar_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_rid'(1) to net 'xbar_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_awid'(6) to net 'axi_interconnect_0_M00_AXI_AWID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_arid'(6) to net 'axi_interconnect_0_M00_AXI_ARID'(1) - Only lower order bits will be connected.
-VHDL Output written to : /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/sim/resizer.v
-VHDL Output written to : /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/hdl/resizer_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/xbar .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_100M .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block GrayScale_Accel_0 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/ip/resizer_auto_us_0/resizer_auto_us_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_us .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/ip/resizer_auto_us_1/resizer_auto_us_1_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s01_couplers/auto_us .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/ip/resizer_auto_ds_0/resizer_auto_ds_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_ds .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/ip/resizer_auto_pc_0/resizer_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
-Exporting to file /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/hw_handoff/resizer.hwh
-Generated Block Design Tcl file /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/hw_handoff/resizer_bd.tcl
-Generated Hardware Definition File /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/synth/resizer.hwdef
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP resizer_auto_pc_0, cache-ID = dc6ef21bff7973e7; cache size = 19.436 MB.
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP resizer_auto_ds_0, cache-ID = ca8f071eaf6d2418; cache size = 19.436 MB.
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP resizer_auto_us_0, cache-ID = 90e01a699f071929; cache size = 19.436 MB.
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP resizer_auto_us_1, cache-ID = b83ee42a5b572fe6; cache size = 19.436 MB.
-[Sun May  3 19:05:14 2020] Launched resizer_GrayScale_Accel_0_0_synth_1, synth_1...
-Run output will be captured here:
-resizer_GrayScale_Accel_0_0_synth_1: /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.runs/resizer_GrayScale_Accel_0_0_synth_1/runme.log
-synth_1: /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.runs/synth_1/runme.log
-[Sun May  3 19:05:14 2020] Launched impl_1...
-Run output will be captured here: /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 6939.273 ; gain = 81.219 ; free physical = 1968 ; free virtual = 9967
-write_bd_tcl -force /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/resizer.tcl
-INFO: [BD 5-148] Tcl file written out </home/silvio/PosDoc/Ultra96/Pynq/GrayScale/resizer.tcl>.
-
-file copy -force /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.runs/impl_1/resizer_wrapper.bit /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/resizer.bit
-close_project
-open_project /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.xpr
-Scanning sources...
-Finished scanning sources
+create_peripheral xilinx.com user EuclideanDistance_Accel 1.0 -dir {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/../ip_repo}
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:EuclideanDistance_Accel:1.0]
+add_peripheral_interface S00_AXIS -interface_mode slave -axi_type stream [ipx::find_open_core xilinx.com:user:EuclideanDistance_Accel:1.0]
+add_peripheral_interface M00_AXIS -interface_mode master -axi_type stream [ipx::find_open_core xilinx.com:user:EuclideanDistance_Accel:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core xilinx.com:user:EuclideanDistance_Accel:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:EuclideanDistance_Accel:1.0]
+set_property  ip_repo_paths  {{C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/../ip_repo/EuclideanDistance_Accel_1.0} C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_2.0 C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_1.0 C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_2.0 {C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project/ip_repo}} [current_project]
+update_ip_catalog -rebuild
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/silvio/PosDoc/Ultra96/GrayScale/ip_repo'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.3/data/ip'.
-WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
-List of locked IPs:
-design_1_GrayScale_Accel_0_0
-
-open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 6939.273 ; gain = 0.000 ; free physical = 2424 ; free virtual = 10071
-open_bd_design {/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd}
-Adding cell -- user.org:user:GrayScale_Accel:1.0 - GrayScale_Accel_0
-Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
-Adding cell -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
-Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
-Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
-Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
-Adding cell -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph
-Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
-Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
-Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
-Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps8_0_100M
-Adding cell -- xilinx.com:ip:zynq_ultra_ps_e:3.2 - zynq_ultra_ps_e_0
-Successfully read diagram <design_1> from BD file </home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd>
-update_compile_order -fileset sources_1
-report_ip_status -name ip_status 
-upgrade_ip -vlnv user.org:user:GrayScale_Accel:1.0 [get_ips  design_1_GrayScale_Accel_0_0] -log ip_upgrade.log
-Upgrading '/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd'
-INFO: [IP_Flow 19-1972] Upgraded design_1_GrayScale_Accel_0_0 from GrayScale_Accel_v1.0 1.0 to GrayScale_Accel_v1.0 1.0
-Wrote  : </home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd> 
-Wrote  : </home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/silvio/PosDoc/Ultra96/GrayScale/ip_upgrade.log'.
-export_ip_user_files -of_objects [get_ips design_1_GrayScale_Accel_0_0] -no_script -sync -force -quiet
-generate_target all [get_files  /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd]
-WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/xbar/M00_AXI(0)
-WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/xbar/M00_AXI(0)
-WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/m00_couplers/auto_ds/S_AXI(0) and /ps8_0_axi_periph/xbar/M00_AXI(16)
-WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/m00_couplers/auto_ds/S_AXI(0) and /ps8_0_axi_periph/xbar/M00_AXI(16)
-Wrote  : </home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd> 
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_bid'(1) to net 'xbar_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_rid'(1) to net 'xbar_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_awid'(6) to net 'axi_interconnect_0_M00_AXI_AWID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_arid'(6) to net 'axi_interconnect_0_M00_AXI_ARID'(1) - Only lower order bits will be connected.
-VHDL Output written to : /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/synth/design_1.v
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_bid'(1) to net 'xbar_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_rid'(1) to net 'xbar_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_awid'(6) to net 'axi_interconnect_0_M00_AXI_AWID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_arid'(6) to net 'axi_interconnect_0_M00_AXI_ARID'(1) - Only lower order bits will be connected.
-VHDL Output written to : /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/sim/design_1.v
-VHDL Output written to : /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block GrayScale_Accel_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/xbar .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_100M .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_us .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s01_couplers/auto_us .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/m00_couplers/auto_ds .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/m00_couplers/auto_pc .
-Exporting to file /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
-Generated Block Design Tcl file /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
-Generated Hardware Definition File /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/synth/design_1.hwdef
-generate_target: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 7021.824 ; gain = 0.000 ; free physical = 2010 ; free virtual = 9664
-catch { config_ip_cache -export [get_ips -all design_1_GrayScale_Accel_0_0] }
-catch { config_ip_cache -export [get_ips -all design_1_auto_us_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_0, cache-ID = 90e01a699f071929; cache size = 17,254 MB.
-catch { config_ip_cache -export [get_ips -all design_1_auto_us_1] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_1, cache-ID = b83ee42a5b572fe6; cache size = 17,254 MB.
-catch { config_ip_cache -export [get_ips -all design_1_auto_ds_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = ca8f071eaf6d2418; cache size = 17,254 MB.
-catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = dc6ef21bff7973e7; cache size = 17,254 MB.
-export_ip_user_files -of_objects [get_files /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd]
-launch_runs -jobs 2 design_1_GrayScale_Accel_0_0_synth_1
-[Sun May  3 19:20:47 2020] Launched design_1_GrayScale_Accel_0_0_synth_1...
-Run output will be captured here: /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.runs/design_1_GrayScale_Accel_0_0_synth_1/runme.log
-launch_runs: Time (s): cpu = 00:00:00,74 ; elapsed = 00:00:10 . Memory (MB): peak = 7021.824 ; gain = 0.000 ; free physical = 1952 ; free virtual = 9635
-export_simulation -of_objects [get_files /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.ip_user_files/sim_scripts -ip_user_files_dir /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.ip_user_files -ipstatic_source_dir /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/modelsim} {questa=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/questa} {ies=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/ies} {xcelium=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/xcelium} {vcs=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/vcs} {riviera=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
-report_ip_status -name ip_status 
-ipx::edit_ip_in_project -upgrade true -name GrayScale_Accel_v1_0_project -directory /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.tmp/GrayScale_Accel_v1_0_project /home/silvio/PosDoc/Ultra96/GrayScale/ip_repo/GrayScale_Accel_1.0/component.xml
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_2.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_2.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project/ip_repo'.
+ipx::edit_ip_in_project -upgrade true -name edit_EuclideanDistance_Accel_v1_0 -directory {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado\ Project/../ip_repo} c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/component.xml
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 950.418 ; gain = 2.145
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/silvio/PosDoc/Ultra96/GrayScale/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_2.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_2.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project/ip_repo'.
 INFO: [IP_Flow 19-795] Syncing license key meta-data
-WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/silvio/PosDoc/Ultra96/GrayScale/ip_repo/GrayScale_Accel_1.0/src/axis_fifo_v1_0.sv:]
-WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/silvio/PosDoc/Ultra96/GrayScale/ip_repo/GrayScale_Accel_1.0/hdl/GrayScale_Accel_v1_0.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0_S00_AXIS.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0_M00_AXIS.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0.v:]
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 950.418 ; gain = 2.145
 update_compile_order -fileset sources_1
-close_project
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun May  3 19:24:45 2020] Launched synth_1...
-Run output will be captured here: /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.runs/synth_1/runme.log
-[Sun May  3 19:24:46 2020] Launched impl_1...
-Run output will be captured here: /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:00,58 ; elapsed = 00:00:10 . Memory (MB): peak = 7069.590 ; gain = 0.000 ; free physical = 1886 ; free virtual = 9783
-write_bd_tcl -force /home/silvio/PosDoc/Ultra96/GrayScale/design_1.tcl
-INFO: [BD 5-148] Tcl file written out </home/silvio/PosDoc/Ultra96/GrayScale/design_1.tcl>.
-
-file copy -force /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.runs/impl_1/design_1_wrapper.bit /home/silvio/PosDoc/Ultra96/GrayScale/design_1.bit
-ipx::edit_ip_in_project -upgrade true -name GrayScale_Accel_v1_0_project -directory /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.tmp/GrayScale_Accel_v1_0_project /home/silvio/PosDoc/Ultra96/GrayScale/ip_repo/GrayScale_Accel_1.0/component.xml
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.3/data/ip'.
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 7069.590 ; gain = 0.000 ; free physical = 2543 ; free virtual = 9980
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/silvio/PosDoc/Ultra96/GrayScale/ip_repo'.
-INFO: [IP_Flow 19-795] Syncing license key meta-data
-WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/silvio/PosDoc/Ultra96/GrayScale/ip_repo/GrayScale_Accel_1.0/src/axis_fifo_v1_0.sv:]
-WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/silvio/PosDoc/Ultra96/GrayScale/ip_repo/GrayScale_Accel_1.0/hdl/GrayScale_Accel_v1_0.v:]
-ipx::edit_ip_in_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 7069.590 ; gain = 0.000 ; free physical = 2552 ; free virtual = 9988
+set_property file_type SystemVerilog [get_files  c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0.v]
 update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/src C:/Users/silvi/Documents/Projetos/euclidean-distance/src/axis_fifo_v1_0.sv
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0_M00_AXIS.v] -no_script -reset -force -quiet
+remove_files  c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0_M00_AXIS.v
+export_ip_user_files -of_objects  [get_files c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0_S00_AXIS.v] -no_script -reset -force -quiet
+remove_files  c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0_S00_AXIS.v
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0_S00_AXIS.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_verilogsynthesis (Verilog Synthesis)': File 'c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0_M00_AXIS.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0_S00_AXIS.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_verilogbehavioralsimulation (Verilog Simulation)': File 'c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0_M00_AXIS.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
 ipx::merge_project_changes hdl_parameters [ipx::current_core]
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-WARNING: [IP_Flow 19-5226] Project source file '/home/silvio/PosDoc/Ultra96/GrayScale/ip_repo/GrayScale_Accel_1.0/component.xml' ignored by IP packager.
-set_property core_revision 8 [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-4300] HDL parameter 'C_S00_AXIS_TDATA_WIDTH' has its value changed from '32' to '24'.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+ERROR: [Common 17-39] 'ipx::merge_project_changes' failed due to earlier errors.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-4300] HDL parameter 'C_S00_AXIS_TDATA_WIDTH' has its value changed from '24' to '32'.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
 ipx::update_source_project_archive -component [ipx::current_core]
 ipx::create_xgui_files [ipx::current_core]
 ipx::update_checksums [ipx::current_core]
 ipx::save_core [ipx::current_core]
 ipx::move_temp_component_back -component [ipx::current_core]
 close_project -delete
-update_ip_catalog -rebuild -repo_path /home/silvio/PosDoc/Ultra96/GrayScale/ip_repo
-INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/silvio/PosDoc/Ultra96/GrayScale/ip_repo'
-report_ip_status -name ip_status 
-upgrade_ip -vlnv user.org:user:GrayScale_Accel:1.0 [get_ips  design_1_GrayScale_Accel_0_0] -log ip_upgrade.log
-Upgrading '/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd'
-INFO: [IP_Flow 19-3422] Upgraded design_1_GrayScale_Accel_0_0 (GrayScale_Accel_v1.0 1.0) from revision 7 to revision 8
-Wrote  : </home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd> 
-INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/silvio/PosDoc/Ultra96/GrayScale/ip_upgrade.log'.
-export_ip_user_files -of_objects [get_ips design_1_GrayScale_Accel_0_0] -no_script -sync -force -quiet
-generate_target all [get_files  /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd]
+update_ip_catalog -rebuild -repo_path c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0'
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:EuclideanDistance_Accel:1.0 EuclideanDistance_Ac_0
+endgroup
+set_property location {7 2480 -143} [get_bd_cells EuclideanDistance_Ac_0]
+delete_bd_objs [get_bd_intf_nets axis_dwidth_converter_1_M_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM] [get_bd_intf_pins EuclideanDistance_Ac_0/M00_AXIS]
+delete_bd_objs [get_bd_intf_nets GrayScale_Accel_pipe_0_M00_AXIS]
+delete_bd_objs [get_bd_intf_nets ps8_0_axi_periph_M01_AXI]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins ps8_0_axi_periph/M01_AXI] [get_bd_intf_pins EuclideanDistance_Ac_0/S00_AXI]
+delete_bd_objs [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S] [get_bd_intf_pins EuclideanDistance_Ac_0/S00_AXIS]
+delete_bd_objs [get_bd_intf_nets axis_dwidth_converter_0_M_AXIS]
+delete_bd_objs [get_bd_cells GrayScale_Accel_pipe_0]
+delete_bd_objs [get_bd_cells axis_dwidth_converter_0]
+delete_bd_objs [get_bd_cells axis_dwidth_converter_1]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)" }  [get_bd_pins EuclideanDistance_Ac_0/s00_axis_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)" }  [get_bd_pins EuclideanDistance_Ac_0/m00_axis_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)" }  [get_bd_pins EuclideanDistance_Ac_0/s00_axi_aclk]
+endgroup
+validate_bd_design
+CRITICAL WARNING: [BD 41-1356] Address block </EuclideanDistance_Ac_0/S00_AXI/S00_AXI_reg> is not mapped into </zynq_ultra_ps_e_0/Data>. Please use Address Editor to either map or exclude it.
+CRITICAL WARNING: [BD 41-1356] Address block </EuclideanDistance_Ac_0/S00_AXI/S00_AXI_reg> is not mapped into </zynq_ultra_ps_e_0/Data>. Please use Address Editor to either map or exclude it.
 WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/xbar/M00_AXI(0)
 WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/xbar/M00_AXI(0)
-WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/m00_couplers/auto_ds/S_AXI(0) and /ps8_0_axi_periph/xbar/M00_AXI(16)
-WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/m00_couplers/auto_ds/S_AXI(0) and /ps8_0_axi_periph/xbar/M00_AXI(16)
-Wrote  : </home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd> 
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /ps8_0_axi_periph/s00_mmu/M_AXI(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /ps8_0_axi_periph/s00_mmu/M_AXI(16)
+validate_bd_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1061.547 ; gain = 0.000
+assign_bd_address [get_bd_addr_segs {EuclideanDistance_Ac_0/S00_AXI/S00_AXI_reg }]
+</EuclideanDistance_Ac_0/S00_AXI/S00_AXI_reg> is being mapped into </zynq_ultra_ps_e_0/Data> at <0xA0001000 [ 4K ]>
+validate_bd_design
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/xbar/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/xbar/M00_AXI(0)
+validate_bd_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1061.547 ; gain = 0.000
+regenerate_bd_layout
+save_bd_design
+Wrote  : <C:\Users\silvi\Documents\Projetos\euclidean-distance\Vivado Project\EuclideanDistance.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
 WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_bid'(1) to net 'xbar_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
 WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_rid'(1) to net 'xbar_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
 WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_awid'(6) to net 'axi_interconnect_0_M00_AXI_AWID'(1) - Only lower order bits will be connected.
 WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_arid'(6) to net 'axi_interconnect_0_M00_AXI_ARID'(1) - Only lower order bits will be connected.
-VHDL Output written to : /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/synth/design_1.v
 WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_bid'(1) to net 'xbar_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
 WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_rid'(1) to net 'xbar_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
 WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_awid'(6) to net 'axi_interconnect_0_M00_AXI_AWID'(1) - Only lower order bits will be connected.
 WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_arid'(6) to net 'axi_interconnect_0_M00_AXI_ARID'(1) - Only lower order bits will be connected.
-VHDL Output written to : /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/sim/design_1.v
-VHDL Output written to : /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block GrayScale_Accel_0 .
+VHDL Output written to : C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
 INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/xbar .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_100M .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc'
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc'
 INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_us .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_ooc.xdc'
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_ooc.xdc'
 INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s01_couplers/auto_us .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/m00_couplers/auto_ds .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/m00_couplers/auto_pc .
-Exporting to file /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
-Generated Block Design Tcl file /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
-Generated Hardware Definition File /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/synth/design_1.hwdef
-generate_target: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 7120.520 ; gain = 50.930 ; free physical = 2341 ; free virtual = 9823
-catch { config_ip_cache -export [get_ips -all design_1_GrayScale_Accel_0_0] }
-catch { config_ip_cache -export [get_ips -all design_1_auto_us_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_0, cache-ID = 90e01a699f071929; cache size = 18,647 MB.
-catch { config_ip_cache -export [get_ips -all design_1_auto_us_1] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_us_1, cache-ID = b83ee42a5b572fe6; cache size = 18,647 MB.
-catch { config_ip_cache -export [get_ips -all design_1_auto_ds_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_ds_0, cache-ID = ca8f071eaf6d2418; cache size = 18,647 MB.
-catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = dc6ef21bff7973e7; cache size = 18,647 MB.
-export_ip_user_files -of_objects [get_files /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd]
-launch_runs -jobs 2 design_1_GrayScale_Accel_0_0_synth_1
-[Sun May  3 19:38:56 2020] Launched design_1_GrayScale_Accel_0_0_synth_1...
-Run output will be captured here: /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.runs/design_1_GrayScale_Accel_0_0_synth_1/runme.log
-launch_runs: Time (s): cpu = 00:00:00,60 ; elapsed = 00:00:10 . Memory (MB): peak = 7120.520 ; gain = 0.000 ; free physical = 2191 ; free virtual = 9709
-export_simulation -of_objects [get_files /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.ip_user_files/sim_scripts -ip_user_files_dir /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.ip_user_files -ipstatic_source_dir /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/modelsim} {questa=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/questa} {ies=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/ies} {xcelium=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/xcelium} {vcs=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/vcs} {riviera=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block EuclideanDistance_Ac_0 .
+Exporting to file C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+[Mon Aug 23 14:38:01 2021] Launched synth_1...
+Run output will be captured here: C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1152.598 ; gain = 91.051
+ipx::edit_ip_in_project -upgrade true -name EuclideanDistance_Accel_v1_0_project -directory {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado\ Project/EuclideanDistance.tmp/EuclideanDistance_Accel_v1_0_project} c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/silvi/documents/projetos/euclidean-distance/vivado project/euclideandistance.tmp/euclideandistance_accel_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1181.543 ; gain = 28.945
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_2.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_2.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/src/axis_fifo_v1_0.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0.v:]
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1187.465 ; gain = 34.867
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/src {C:/Users/silvi/Documents/Projetos/euclidean-distance/src/buffer_v1_0.sv C:/Users/silvi/Documents/Projetos/euclidean-distance/src/demux.sv C:/Users/silvi/Documents/Projetos/euclidean-distance/src/mintree.sv C:/Users/silvi/Documents/Projetos/euclidean-distance/src/acc.sv C:/Users/silvi/Documents/Projetos/euclidean-distance/src/controle.sv C:/Users/silvi/Documents/Projetos/euclidean-distance/src/sqrt.sv C:/Users/silvi/Documents/Projetos/euclidean-distance/src/subtrator.sv C:/Users/silvi/Documents/Projetos/euclidean-distance/src/mreg.sv}
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/component.xml' ignored by IP packager.
+CRITICAL WARNING: [HDL 9-806] Syntax error near "+". [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0\hdl/EuclideanDistance_Accel_v1_0.v:596]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "+". [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0.v:596]
+ERROR: [IP_Flow 19-259] [HDL Parser] Failed analyze operation while parsing HDL.
+ERROR: [IP_Flow 19-258] [HDL Parser] Error parsing HDL file 'hdl/EuclideanDistance_Accel_v1_0.v'.
+ERROR: [Common 17-39] 'ipx::merge_project_changes' failed due to earlier errors.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:EuclideanDistance_Accel:1.0 [get_ips  design_1_EuclideanDistance_Ac_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_EuclideanDistance_Ac_0_0 (EuclideanDistance_Accel_v1.0 1.0) from revision 2 to revision 3
+Wrote  : <C:\Users\silvi\Documents\Projetos\euclidean-distance\Vivado Project\EuclideanDistance.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_EuclideanDistance_Ac_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  {{C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/design_1.bd}}]
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/xbar/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/xbar/M00_AXI(0)
+Wrote  : <C:\Users\silvi\Documents\Projetos\euclidean-distance\Vivado Project\EuclideanDistance.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_bid'(1) to net 'xbar_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_rid'(1) to net 'xbar_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_awid'(6) to net 'axi_interconnect_0_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_arid'(6) to net 'axi_interconnect_0_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_bid'(1) to net 'xbar_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_rid'(1) to net 'xbar_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_awid'(6) to net 'axi_interconnect_0_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_arid'(6) to net 'axi_interconnect_0_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block EuclideanDistance_Ac_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s01_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 1221.438 ; gain = 19.570
+export_ip_user_files -of_objects [get_files {{C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/design_1.bd}}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/design_1.bd}}] -directory {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.ip_user_files} -ipstatic_source_dir {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.cache/compile_simlib/modelsim} {questa=C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.cache/compile_simlib/questa} {riviera=C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.cache/compile_simlib/riviera} {activehdl=C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 report_ip_status -name ip_status 
 reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Mon Aug 23 15:03:13 2021] Launched synth_1...
+Run output will be captured here: C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Mon Aug 23 15:27:45 2021] Launched impl_1...
+Run output will be captured here: C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.runs/impl_1/runme.log
+ipx::edit_ip_in_project -upgrade true -name EuclideanDistance_Accel_v1_0_project -directory {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado\ Project/EuclideanDistance.tmp/EuclideanDistance_Accel_v1_0_project} c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/silvi/documents/projetos/euclidean-distance/vivado project/euclideandistance.tmp/euclideandistance_accel_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1364.246 ; gain = 9.902
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_2.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_2.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/src/acc.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/src/axis_fifo_v1_0.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/src/buffer_v1_0.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/src/controle.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/src/demux.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/src/mintree.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/src/mreg.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/src/sqrt.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/src/subtrator.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0.v:]
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1365.906 ; gain = 11.562
+update_compile_order -fileset sources_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/component.xml' ignored by IP packager.
+CRITICAL WARNING: [HDL 9-806] Syntax error near "+". [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0\hdl/EuclideanDistance_Accel_v1_0.v:603]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "+". [c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0.v:603]
+ERROR: [IP_Flow 19-259] [HDL Parser] Failed analyze operation while parsing HDL.
+ERROR: [IP_Flow 19-258] [HDL Parser] Error parsing HDL file 'hdl/EuclideanDistance_Accel_v1_0.v'.
+ERROR: [Common 17-39] 'ipx::merge_project_changes' failed due to earlier errors.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:EuclideanDistance_Accel:1.0 [get_ips  design_1_EuclideanDistance_Ac_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_EuclideanDistance_Ac_0_0 (EuclideanDistance_Accel_v1.0 1.0) from revision 3 to revision 4
+Wrote  : <C:\Users\silvi\Documents\Projetos\euclidean-distance\Vivado Project\EuclideanDistance.srcs\sources_1\bd\design_1\design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_EuclideanDistance_Ac_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  {{C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/design_1.bd}}]
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_ds/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_FPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/xbar/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_interconnect_0/xbar/M00_AXI(0)
+Wrote  : <C:\Users\silvi\Documents\Projetos\euclidean-distance\Vivado Project\EuclideanDistance.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_bid'(1) to net 'xbar_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_rid'(1) to net 'xbar_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_awid'(6) to net 'axi_interconnect_0_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_arid'(6) to net 'axi_interconnect_0_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_bid'(1) to net 'xbar_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_interconnect_0/xbar/m_axi_rid'(1) to net 'xbar_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_awid'(6) to net 'axi_interconnect_0_M00_AXI_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/zynq_ultra_ps_e_0/saxigp2_arid'(6) to net 'axi_interconnect_0_M00_AXI_ARID'(1) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block EuclideanDistance_Ac_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s01_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_ds .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:24 ; elapsed = 00:00:30 . Memory (MB): peak = 1411.629 ; gain = 23.004
+export_ip_user_files -of_objects [get_files {{C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/design_1.bd}}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/design_1.bd}}] -directory {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.ip_user_files} -ipstatic_source_dir {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.cache/compile_simlib/modelsim} {questa=C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.cache/compile_simlib/questa} {riviera=C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.cache/compile_simlib/riviera} {activehdl=C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+[Mon Aug 23 16:17:14 2021] Launched synth_1...
+Run output will be captured here: C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.runs/synth_1/runme.log
+[Mon Aug 23 16:17:14 2021] Launched impl_1...
+Run output will be captured here: C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.runs/impl_1/runme.log
 launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun May  3 19:39:27 2020] Launched design_1_GrayScale_Accel_0_0_synth_1, synth_1...
-Run output will be captured here:
-design_1_GrayScale_Accel_0_0_synth_1: /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.runs/design_1_GrayScale_Accel_0_0_synth_1/runme.log
-synth_1: /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.runs/synth_1/runme.log
-[Sun May  3 19:39:27 2020] Launched impl_1...
-Run output will be captured here: /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 7188.559 ; gain = 0.000 ; free physical = 2059 ; free virtual = 9625
-write_bd_tcl -force /home/silvio/PosDoc/Ultra96/GrayScale/design_1.tcl
-INFO: [BD 5-148] Tcl file written out </home/silvio/PosDoc/Ultra96/GrayScale/design_1.tcl>.
-
-file copy -force /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.runs/impl_1/design_1_wrapper.bit /home/silvio/PosDoc/Ultra96/GrayScale/design_1.bit
+[Mon Aug 23 16:51:37 2021] Launched impl_1...
+Run output will be captured here: C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.runs/impl_1/runme.log
 exit
-INFO: [Common 17-206] Exiting Vivado at Sun May  3 20:03:17 2020...
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 23 16:56:02 2021...

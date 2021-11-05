@@ -1,96 +1,135 @@
 #-----------------------------------------------------------
 # Vivado v2018.3 (64-bit)
-# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun May  3 19:00:47 2020
-# Process ID: 32452
-# Current directory: /home/silvio/PosDoc/Ultra96/GrayScale
-# Command line: vivado
-# Log file: /home/silvio/PosDoc/Ultra96/GrayScale/vivado.log
-# Journal file: /home/silvio/PosDoc/Ultra96/GrayScale/vivado.jou
+# Start of session at: Mon Aug 23 14:17:11 2021
+# Process ID: 27924
+# Current directory: C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5112 C:\Users\silvi\Documents\Projetos\grayscale-accel-pipe\Vivado Project\GrayScale.xpr
+# Log file: C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project/vivado.log
+# Journal file: C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.xpr
+open_project {C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project/GrayScale.xpr}
 update_compile_order -fileset sources_1
-open_bd_design {/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/resizer.bd}
-report_ip_status -name ip_status 
-ipx::edit_ip_in_project -upgrade true -name GrayScale_Accel_v1_0_project -directory /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.tmp/GrayScale_Accel_v1_0_project /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/ip_repo/GrayScale_Accel_1.0/component.xml
-update_compile_order -fileset sources_1
-close_project
-upgrade_ip -vlnv user.org:user:GrayScale_Accel:1.0 [get_ips  resizer_GrayScale_Accel_0_0] -log ip_upgrade.log
-export_ip_user_files -of_objects [get_ips resizer_GrayScale_Accel_0_0] -no_script -sync -force -quiet
-generate_target all [get_files  /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/resizer.bd]
-catch { config_ip_cache -export [get_ips -all resizer_GrayScale_Accel_0_0] }
-catch { config_ip_cache -export [get_ips -all resizer_auto_us_0] }
-catch { config_ip_cache -export [get_ips -all resizer_auto_us_1] }
-catch { config_ip_cache -export [get_ips -all resizer_auto_ds_0] }
-catch { config_ip_cache -export [get_ips -all resizer_auto_pc_0] }
-export_ip_user_files -of_objects [get_files /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/resizer.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/resizer.bd]
-launch_runs -jobs 2 resizer_GrayScale_Accel_0_0_synth_1
-export_simulation -of_objects [get_files /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.srcs/sources_1/bd/resizer/resizer.bd] -directory /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.ip_user_files/sim_scripts -ip_user_files_dir /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.ip_user_files -ipstatic_source_dir /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.cache/compile_simlib/modelsim} {questa=/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.cache/compile_simlib/questa} {ies=/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.cache/compile_simlib/ies} {xcelium=/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.cache/compile_simlib/xcelium} {vcs=/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.cache/compile_simlib/vcs} {riviera=/home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
-report_ip_status -name ip_status 
-validate_bd_design -force
-report_ip_status -name ip_status 
-save_bd_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-wait_on_run impl_1
-write_bd_tcl -force /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/resizer.tcl
-file copy -force /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/GrayScale.runs/impl_1/resizer_wrapper.bit /home/silvio/PosDoc/Ultra96/Pynq/GrayScale/resizer.bit
-close_project
-open_project /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.xpr
-open_bd_design {/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd}
-update_compile_order -fileset sources_1
-report_ip_status -name ip_status 
-upgrade_ip -vlnv user.org:user:GrayScale_Accel:1.0 [get_ips  design_1_GrayScale_Accel_0_0] -log ip_upgrade.log
-export_ip_user_files -of_objects [get_ips design_1_GrayScale_Accel_0_0] -no_script -sync -force -quiet
-generate_target all [get_files  /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd]
-catch { config_ip_cache -export [get_ips -all design_1_GrayScale_Accel_0_0] }
-catch { config_ip_cache -export [get_ips -all design_1_auto_us_0] }
-catch { config_ip_cache -export [get_ips -all design_1_auto_us_1] }
-catch { config_ip_cache -export [get_ips -all design_1_auto_ds_0] }
-catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
-export_ip_user_files -of_objects [get_files /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd]
-launch_runs -jobs 2 design_1_GrayScale_Accel_0_0_synth_1
-export_simulation -of_objects [get_files /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.ip_user_files/sim_scripts -ip_user_files_dir /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.ip_user_files -ipstatic_source_dir /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/modelsim} {questa=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/questa} {ies=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/ies} {xcelium=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/xcelium} {vcs=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/vcs} {riviera=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
-report_ip_status -name ip_status 
-ipx::edit_ip_in_project -upgrade true -name GrayScale_Accel_v1_0_project -directory /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.tmp/GrayScale_Accel_v1_0_project /home/silvio/PosDoc/Ultra96/GrayScale/ip_repo/GrayScale_Accel_1.0/component.xml
+save_project_as EuclideanDistance {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project} -force
+import_files
+open_bd_design {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/design_1.bd}
+ipx::edit_ip_in_project -upgrade true -name GrayScale_Accel_pipe_v2_0_project -directory {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado\ Project/EuclideanDistance.tmp/GrayScale_Accel_pipe_v2_0_project} c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_2.0/component.xml
 update_compile_order -fileset sources_1
 close_project
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-wait_on_run impl_1
-write_bd_tcl -force /home/silvio/PosDoc/Ultra96/GrayScale/design_1.tcl
-file copy -force /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.runs/impl_1/design_1_wrapper.bit /home/silvio/PosDoc/Ultra96/GrayScale/design_1.bit
-ipx::edit_ip_in_project -upgrade true -name GrayScale_Accel_v1_0_project -directory /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.tmp/GrayScale_Accel_v1_0_project /home/silvio/PosDoc/Ultra96/GrayScale/ip_repo/GrayScale_Accel_1.0/component.xml
+create_peripheral xilinx.com user EuclideanDistance_Accel 1.0 -dir {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/../ip_repo}
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:EuclideanDistance_Accel:1.0]
+add_peripheral_interface S00_AXIS -interface_mode slave -axi_type stream [ipx::find_open_core xilinx.com:user:EuclideanDistance_Accel:1.0]
+add_peripheral_interface M00_AXIS -interface_mode master -axi_type stream [ipx::find_open_core xilinx.com:user:EuclideanDistance_Accel:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core xilinx.com:user:EuclideanDistance_Accel:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:EuclideanDistance_Accel:1.0]
+set_property  ip_repo_paths  {{C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/../ip_repo/EuclideanDistance_Accel_1.0} C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_2.0 C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_1.0 C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_2.0 {C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project/ip_repo}} [current_project]
+update_ip_catalog -rebuild
+ipx::edit_ip_in_project -upgrade true -name edit_EuclideanDistance_Accel_v1_0 -directory {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado\ Project/../ip_repo} c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/component.xml
 update_compile_order -fileset sources_1
+set_property file_type SystemVerilog [get_files  c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0.v]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/src C:/Users/silvi/Documents/Projetos/euclidean-distance/src/axis_fifo_v1_0.sv
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0_M00_AXIS.v] -no_script -reset -force -quiet
+remove_files  c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0_M00_AXIS.v
+export_ip_user_files -of_objects  [get_files c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0_S00_AXIS.v] -no_script -reset -force -quiet
+remove_files  c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/hdl/EuclideanDistance_Accel_v1_0_S00_AXIS.v
+ipx::merge_project_changes files [ipx::current_core]
 ipx::merge_project_changes hdl_parameters [ipx::current_core]
-set_property core_revision 8 [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
 ipx::update_source_project_archive -component [ipx::current_core]
 ipx::create_xgui_files [ipx::current_core]
 ipx::update_checksums [ipx::current_core]
 ipx::save_core [ipx::current_core]
 ipx::move_temp_component_back -component [ipx::current_core]
 close_project -delete
-update_ip_catalog -rebuild -repo_path /home/silvio/PosDoc/Ultra96/GrayScale/ip_repo
+update_ip_catalog -rebuild -repo_path c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:EuclideanDistance_Accel:1.0 EuclideanDistance_Ac_0
+endgroup
+set_property location {7 2480 -143} [get_bd_cells EuclideanDistance_Ac_0]
+delete_bd_objs [get_bd_intf_nets axis_dwidth_converter_1_M_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM] [get_bd_intf_pins EuclideanDistance_Ac_0/M00_AXIS]
+delete_bd_objs [get_bd_intf_nets GrayScale_Accel_pipe_0_M00_AXIS]
+delete_bd_objs [get_bd_intf_nets ps8_0_axi_periph_M01_AXI]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins ps8_0_axi_periph/M01_AXI] [get_bd_intf_pins EuclideanDistance_Ac_0/S00_AXI]
+delete_bd_objs [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S] [get_bd_intf_pins EuclideanDistance_Ac_0/S00_AXIS]
+delete_bd_objs [get_bd_intf_nets axis_dwidth_converter_0_M_AXIS]
+delete_bd_objs [get_bd_cells GrayScale_Accel_pipe_0]
+delete_bd_objs [get_bd_cells axis_dwidth_converter_0]
+delete_bd_objs [get_bd_cells axis_dwidth_converter_1]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)" }  [get_bd_pins EuclideanDistance_Ac_0/s00_axis_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)" }  [get_bd_pins EuclideanDistance_Ac_0/m00_axis_aclk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)" }  [get_bd_pins EuclideanDistance_Ac_0/s00_axi_aclk]
+endgroup
+validate_bd_design
+assign_bd_address [get_bd_addr_segs {EuclideanDistance_Ac_0/S00_AXI/S00_AXI_reg }]
+validate_bd_design
+regenerate_bd_layout
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+ipx::edit_ip_in_project -upgrade true -name EuclideanDistance_Accel_v1_0_project -directory {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado\ Project/EuclideanDistance.tmp/EuclideanDistance_Accel_v1_0_project} c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/component.xml
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/src {C:/Users/silvi/Documents/Projetos/euclidean-distance/src/buffer_v1_0.sv C:/Users/silvi/Documents/Projetos/euclidean-distance/src/demux.sv C:/Users/silvi/Documents/Projetos/euclidean-distance/src/mintree.sv C:/Users/silvi/Documents/Projetos/euclidean-distance/src/acc.sv C:/Users/silvi/Documents/Projetos/euclidean-distance/src/controle.sv C:/Users/silvi/Documents/Projetos/euclidean-distance/src/sqrt.sv C:/Users/silvi/Documents/Projetos/euclidean-distance/src/subtrator.sv C:/Users/silvi/Documents/Projetos/euclidean-distance/src/mreg.sv}
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0
 report_ip_status -name ip_status 
-upgrade_ip -vlnv user.org:user:GrayScale_Accel:1.0 [get_ips  design_1_GrayScale_Accel_0_0] -log ip_upgrade.log
-export_ip_user_files -of_objects [get_ips design_1_GrayScale_Accel_0_0] -no_script -sync -force -quiet
-generate_target all [get_files  /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd]
-catch { config_ip_cache -export [get_ips -all design_1_GrayScale_Accel_0_0] }
-catch { config_ip_cache -export [get_ips -all design_1_auto_us_0] }
-catch { config_ip_cache -export [get_ips -all design_1_auto_us_1] }
-catch { config_ip_cache -export [get_ips -all design_1_auto_ds_0] }
-catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
-export_ip_user_files -of_objects [get_files /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd]
-launch_runs -jobs 2 design_1_GrayScale_Accel_0_0_synth_1
-export_simulation -of_objects [get_files /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.ip_user_files/sim_scripts -ip_user_files_dir /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.ip_user_files -ipstatic_source_dir /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/modelsim} {questa=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/questa} {ies=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/ies} {xcelium=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/xcelium} {vcs=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/vcs} {riviera=/home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+upgrade_ip -vlnv xilinx.com:user:EuclideanDistance_Accel:1.0 [get_ips  design_1_EuclideanDistance_Ac_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_EuclideanDistance_Ac_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  {{C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/design_1.bd}}]
+export_ip_user_files -of_objects [get_files {{C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/design_1.bd}}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/design_1.bd}}] -directory {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.ip_user_files} -ipstatic_source_dir {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.cache/compile_simlib/modelsim} {questa=C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.cache/compile_simlib/questa} {riviera=C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.cache/compile_simlib/riviera} {activehdl=C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
 report_ip_status -name ip_status 
 reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+ipx::edit_ip_in_project -upgrade true -name EuclideanDistance_Accel_v1_0_project -directory {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado\ Project/EuclideanDistance.tmp/EuclideanDistance_Accel_v1_0_project} c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/silvi/Documents/Projetos/euclidean-distance/ip_repo/EuclideanDistance_Accel_1.0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:EuclideanDistance_Accel:1.0 [get_ips  design_1_EuclideanDistance_Ac_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_EuclideanDistance_Ac_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  {{C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/design_1.bd}}]
+export_ip_user_files -of_objects [get_files {{C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/design_1.bd}}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.srcs/sources_1/bd/design_1/design_1.bd}}] -directory {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.ip_user_files} -ipstatic_source_dir {C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.cache/compile_simlib/modelsim} {questa=C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.cache/compile_simlib/questa} {riviera=C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.cache/compile_simlib/riviera} {activehdl=C:/Users/silvi/Documents/Projetos/euclidean-distance/Vivado Project/EuclideanDistance.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
 launch_runs impl_1 -to_step write_bitstream -jobs 2
 wait_on_run impl_1
-write_bd_tcl -force /home/silvio/PosDoc/Ultra96/GrayScale/design_1.tcl
-file copy -force /home/silvio/PosDoc/Ultra96/GrayScale/GrayScale.runs/impl_1/design_1_wrapper.bit /home/silvio/PosDoc/Ultra96/GrayScale/design_1.bit

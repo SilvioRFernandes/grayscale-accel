@@ -1,18 +1,18 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu Jun 18 19:12:03 2020
-| Host         : DESKTOP-GSGJDCN running 64-bit major release  (build 9200)
+| Date         : Thu Oct 28 16:25:35 2021
+| Host         : SilvioNote running 64-bit major release  (build 9200)
 | Command      : upgrade_ip
 | Device       : xczu3eg-sbva484-1-e
 ------------------------------------------------------------------------------------
 
-Upgrade Log for IP 'design_1_GrayScale_Accel_1_0'
+Upgrade Log for IP 'design_1_GrayScale_Accel_pipe_1_0'
 
 1. Summary
 ----------
 
-SUCCESS in the upgrade of design_1_GrayScale_Accel_1_0 (user.org:user:GrayScale_Accel:2.0) from (Rev. 4) to (Rev. 5)
+SUCCESS in the upgrade of design_1_GrayScale_Accel_pipe_1_0 (xilinx.com:user:GrayScale_Accel_pipe:3.0) from (Rev. 5) to (Rev. 6)
 
 
 
@@ -22,18 +22,18 @@ SUCCESS in the upgrade of design_1_GrayScale_Accel_1_0 (user.org:user:GrayScale_
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Jun 16 18:51:28 2020
-| Host         : DESKTOP-GSGJDCN running 64-bit major release  (build 9200)
+| Date         : Thu Oct 28 14:38:56 2021
+| Host         : SilvioNote running 64-bit major release  (build 9200)
 | Command      : upgrade_ip
 | Device       : xczu3eg-sbva484-1-e
 ------------------------------------------------------------------------------------
 
-Upgrade Log for IP 'design_1_GrayScale_Accel_1_0'
+Upgrade Log for IP 'design_1_GrayScale_Accel_pipe_1_0'
 
 1. Summary
 ----------
 
-SUCCESS in the upgrade of design_1_GrayScale_Accel_1_0 (user.org:user:GrayScale_Accel:2.0) from (Rev. 3) to (Rev. 4)
+SUCCESS in the upgrade of design_1_GrayScale_Accel_pipe_1_0 (xilinx.com:user:GrayScale_Accel_pipe:3.0) from (Rev. 4) to (Rev. 5)
 
 
 
@@ -43,18 +43,149 @@ SUCCESS in the upgrade of design_1_GrayScale_Accel_1_0 (user.org:user:GrayScale_
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon Jun 15 23:50:21 2020
-| Host         : DESKTOP-GSGJDCN running 64-bit major release  (build 9200)
+| Date         : Wed Oct 27 14:02:15 2021
+| Host         : SilvioNote running 64-bit major release  (build 9200)
 | Command      : upgrade_ip
 | Device       : xczu3eg-sbva484-1-e
 ------------------------------------------------------------------------------------
 
-Upgrade Log for IP 'design_1_GrayScale_Accel_1_0'
+Upgrade Log for IP 'design_1_GrayScale_Accel_pipe_1_0'
 
 1. Summary
 ----------
 
-SUCCESS in the upgrade of design_1_GrayScale_Accel_1_0 (user.org:user:GrayScale_Accel:2.0) from (Rev. 2) to (Rev. 3)
+CAUTION (success, with warnings) in the upgrade of design_1_GrayScale_Accel_pipe_1_0 (xilinx.com:user:GrayScale_Accel_pipe:3.0) from (Rev. 3) to (Rev. 4)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_GrayScale_Accel_pipe_1_0'. These changes may impact your design.
+
+
+-Upgraded port 'm00_axis_tdata' width 24 differs from original width 32
+
+-Upgraded port 'm00_axis_tstrb' width 3 differs from original width 4
+
+-Upgraded port 's00_axis_tdata' width 24 differs from original width 32
+
+-Upgraded port 's00_axis_tstrb' width 3 differs from original width 4
+
+
+3. Customization warnings
+-------------------------
+
+An attempt to modify the value of disabled parameter 'C_S00_AXIS_TDATA_WIDTH' from '24' to '32' has been ignored for IP 'design_1_GrayScale_Accel_pipe_1_0'
+
+An attempt to modify the value of disabled parameter 'C_M00_AXIS_TDATA_WIDTH' from '24' to '32' has been ignored for IP 'design_1_GrayScale_Accel_pipe_1_0'
+
+
+4. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:user:GrayScale_Accel_pipe:3.0 -user_name design_1_GrayScale_Accel_pipe_1_0
+set_property -dict "\
+  CONFIG.C_M00_AXIS_START_COUNT {32} \
+  CONFIG.C_M00_AXIS_TDATA_WIDTH {32} \
+  CONFIG.C_S00_AXIS_TDATA_WIDTH {32} \
+  CONFIG.C_S00_AXI_ADDR_WIDTH {4} \
+  CONFIG.C_S00_AXI_BASEADDR {0xFFFFFFFF} \
+  CONFIG.C_S00_AXI_DATA_WIDTH {32} \
+  CONFIG.C_S00_AXI_HIGHADDR {0x00000000} \
+  CONFIG.Component_Name {design_1_GrayScale_Accel_pipe_1_0} \
+  CONFIG.M00_AXIS.CLK_DOMAIN {design_1_zynq_ultra_ps_e_0_0_pl_clk0} \
+  CONFIG.M00_AXIS.FREQ_HZ {100000000} \
+  CONFIG.M00_AXIS.HAS_TKEEP {0} \
+  CONFIG.M00_AXIS.HAS_TLAST {1} \
+  CONFIG.M00_AXIS.HAS_TREADY {1} \
+  CONFIG.M00_AXIS.HAS_TSTRB {1} \
+  CONFIG.M00_AXIS.INSERT_VIP {0} \
+  CONFIG.M00_AXIS.LAYERED_METADATA {undef} \
+  CONFIG.M00_AXIS.PHASE {0.000} \
+  CONFIG.M00_AXIS.TDATA_NUM_BYTES {4} \
+  CONFIG.M00_AXIS.TDEST_WIDTH {0} \
+  CONFIG.M00_AXIS.TID_WIDTH {0} \
+  CONFIG.M00_AXIS.TUSER_WIDTH {0} \
+  CONFIG.M00_AXIS.WIZ_DATA_WIDTH {32} \
+  CONFIG.M00_AXIS_CLK.ASSOCIATED_BUSIF {M00_AXIS} \
+  CONFIG.M00_AXIS_CLK.ASSOCIATED_RESET {m00_axis_aresetn} \
+  CONFIG.M00_AXIS_CLK.CLK_DOMAIN {design_1_zynq_ultra_ps_e_0_0_pl_clk0} \
+  CONFIG.M00_AXIS_CLK.FREQ_HZ {100000000} \
+  CONFIG.M00_AXIS_CLK.INSERT_VIP {0} \
+  CONFIG.M00_AXIS_CLK.PHASE {0.000} \
+  CONFIG.M00_AXIS_RST.INSERT_VIP {0} \
+  CONFIG.M00_AXIS_RST.POLARITY {ACTIVE_LOW} \
+  CONFIG.S00_AXI.ADDR_WIDTH {4} \
+  CONFIG.S00_AXI.ARUSER_WIDTH {0} \
+  CONFIG.S00_AXI.AWUSER_WIDTH {0} \
+  CONFIG.S00_AXI.BUSER_WIDTH {0} \
+  CONFIG.S00_AXI.CLK_DOMAIN {design_1_zynq_ultra_ps_e_0_0_pl_clk0} \
+  CONFIG.S00_AXI.DATA_WIDTH {32} \
+  CONFIG.S00_AXI.FREQ_HZ {100000000} \
+  CONFIG.S00_AXI.HAS_BRESP {1} \
+  CONFIG.S00_AXI.HAS_BURST {0} \
+  CONFIG.S00_AXI.HAS_CACHE {0} \
+  CONFIG.S00_AXI.HAS_LOCK {0} \
+  CONFIG.S00_AXI.HAS_PROT {1} \
+  CONFIG.S00_AXI.HAS_QOS {0} \
+  CONFIG.S00_AXI.HAS_REGION {0} \
+  CONFIG.S00_AXI.HAS_RRESP {1} \
+  CONFIG.S00_AXI.HAS_WSTRB {1} \
+  CONFIG.S00_AXI.ID_WIDTH {0} \
+  CONFIG.S00_AXI.INSERT_VIP {0} \
+  CONFIG.S00_AXI.MAX_BURST_LENGTH {1} \
+  CONFIG.S00_AXI.NUM_READ_OUTSTANDING {8} \
+  CONFIG.S00_AXI.NUM_READ_THREADS {1} \
+  CONFIG.S00_AXI.NUM_WRITE_OUTSTANDING {8} \
+  CONFIG.S00_AXI.NUM_WRITE_THREADS {1} \
+  CONFIG.S00_AXI.PHASE {0.000} \
+  CONFIG.S00_AXI.PROTOCOL {AXI4LITE} \
+  CONFIG.S00_AXI.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.S00_AXI.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.S00_AXI.RUSER_WIDTH {0} \
+  CONFIG.S00_AXI.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.S00_AXI.WIZ_DATA_WIDTH {32} \
+  CONFIG.S00_AXI.WIZ_NUM_REG {4} \
+  CONFIG.S00_AXI.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.S00_AXI.WUSER_WIDTH {0} \
+  CONFIG.S00_AXIS.CLK_DOMAIN {design_1_zynq_ultra_ps_e_0_0_pl_clk0} \
+  CONFIG.S00_AXIS.FREQ_HZ {100000000} \
+  CONFIG.S00_AXIS.HAS_TKEEP {0} \
+  CONFIG.S00_AXIS.HAS_TLAST {1} \
+  CONFIG.S00_AXIS.HAS_TREADY {1} \
+  CONFIG.S00_AXIS.HAS_TSTRB {1} \
+  CONFIG.S00_AXIS.INSERT_VIP {0} \
+  CONFIG.S00_AXIS.LAYERED_METADATA {undef} \
+  CONFIG.S00_AXIS.PHASE {0.000} \
+  CONFIG.S00_AXIS.TDATA_NUM_BYTES {4} \
+  CONFIG.S00_AXIS.TDEST_WIDTH {0} \
+  CONFIG.S00_AXIS.TID_WIDTH {0} \
+  CONFIG.S00_AXIS.TUSER_WIDTH {0} \
+  CONFIG.S00_AXIS.WIZ_DATA_WIDTH {32} \
+  CONFIG.S00_AXIS_CLK.ASSOCIATED_BUSIF {S00_AXIS} \
+  CONFIG.S00_AXIS_CLK.ASSOCIATED_RESET {s00_axis_aresetn} \
+  CONFIG.S00_AXIS_CLK.CLK_DOMAIN {design_1_zynq_ultra_ps_e_0_0_pl_clk0} \
+  CONFIG.S00_AXIS_CLK.FREQ_HZ {100000000} \
+  CONFIG.S00_AXIS_CLK.INSERT_VIP {0} \
+  CONFIG.S00_AXIS_CLK.PHASE {0.000} \
+  CONFIG.S00_AXIS_RST.INSERT_VIP {0} \
+  CONFIG.S00_AXIS_RST.POLARITY {ACTIVE_LOW} \
+  CONFIG.S00_AXI_CLK.ASSOCIATED_BUSIF {S00_AXI} \
+  CONFIG.S00_AXI_CLK.ASSOCIATED_RESET {s00_axi_aresetn} \
+  CONFIG.S00_AXI_CLK.CLK_DOMAIN {design_1_zynq_ultra_ps_e_0_0_pl_clk0} \
+  CONFIG.S00_AXI_CLK.FREQ_HZ {100000000} \
+  CONFIG.S00_AXI_CLK.INSERT_VIP {0} \
+  CONFIG.S00_AXI_CLK.PHASE {0.000} \
+  CONFIG.S00_AXI_RST.INSERT_VIP {0} \
+  CONFIG.S00_AXI_RST.POLARITY {ACTIVE_LOW} " [get_ips design_1_GrayScale_Accel_pipe_1_0]
+
 
 
 
@@ -63,101 +194,17 @@ SUCCESS in the upgrade of design_1_GrayScale_Accel_1_0 (user.org:user:GrayScale_
 
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Tue May 26 21:18:54 2020
-| Host         : silvio-pc running 64-bit Ubuntu 16.04.5 LTS
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Oct 27 13:57:31 2021
+| Host         : SilvioNote running 64-bit major release  (build 9200)
 | Command      : upgrade_ip
 | Device       : xczu3eg-sbva484-1-e
 ------------------------------------------------------------------------------------
 
-Upgrade Log for IP 'design_1_GrayScale_Accel_0_1'
+Upgrade Log for IP 'design_1_GrayScale_Accel_pipe_1_0'
 
 1. Summary
 ----------
 
-SUCCESS in the conversion of design_1_GrayScale_Accel_0_1 (user.org:user:GrayScale_Accel:1.0 (Rev. 8)) to Vivado generation flows.
-
-
-
-
-
-
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Tue May 26 20:27:36 2020
-| Host         : silvio-pc running 64-bit Ubuntu 16.04.5 LTS
-| Command      : upgrade_ip
-| Device       : xczu3eg-sbva484-1-e
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'design_1_GrayScale_Accel_0_1'
-
-1. Summary
-----------
-
-SUCCESS in the conversion of design_1_GrayScale_Accel_0_1 (user.org:user:GrayScale_Accel:1.0 (Rev. 8)) to Vivado generation flows.
-
-
-
-
-
-
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sun May  3 19:38:28 2020
-| Host         : silvio-pc running 64-bit Ubuntu 16.04.5 LTS
-| Command      : upgrade_ip
-| Device       : xczu3eg-sbva484-1-e
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'design_1_GrayScale_Accel_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of design_1_GrayScale_Accel_0_0 (user.org:user:GrayScale_Accel:1.0) from (Rev. 7) to (Rev. 8)
-
-
-
-
-
-
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sun May  3 19:20:21 2020
-| Host         : silvio-pc running 64-bit Ubuntu 16.04.5 LTS
-| Command      : upgrade_ip
-| Device       : xczu3eg-sbva484-1-e
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'design_1_GrayScale_Accel_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the conversion of design_1_GrayScale_Accel_0_0 (user.org:user:GrayScale_Accel:1.0 (Rev. 7)) to Vivado generation flows.
-
-
-
-
-
-
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Sun May  3 18:06:44 2020
-| Host         : silvio-pc running 64-bit Ubuntu 16.04.5 LTS
-| Command      : upgrade_ip
-| Device       : xczu3eg-sbva484-1-e
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'resizer_GrayScale_Accel_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of resizer_GrayScale_Accel_0_0 (user.org:user:GrayScale_Accel:1.0) from (Rev. 6) to (Rev. 7)
+SUCCESS in the upgrade of design_1_GrayScale_Accel_pipe_1_0 (xilinx.com:user:GrayScale_Accel_pipe:3.0) from (Rev. 2) to (Rev. 3)
 

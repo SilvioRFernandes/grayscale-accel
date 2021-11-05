@@ -1,0 +1,63 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Aug 22 16:56:58 2021
+# Process ID: 31948
+# Current directory: C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24828 C:\Users\silvi\Documents\Projetos\grayscale-accel-pipe\Vivado Project\GrayScale.xpr
+# Log file: C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project/vivado.log
+# Journal file: C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project/GrayScale.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_2.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_2.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:32 ; elapsed = 00:00:25 . Memory (MB): peak = 861.281 ; gain = 36.402
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+WARNING: [BD 41-1282] Ignoring parameter HAS_BURST
+WARNING: [BD 41-1281] Parameter HAS_BURST is not defined on /axi_dma_0/M_AXIS_MM2S. Setting parameter on /axi_dma_0/M_AXIS_MM2S failed
+Adding cell -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding cell -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps8_0_100M
+Adding cell -- xilinx.com:ip:zynq_ultra_ps_e:3.2 - zynq_ultra_ps_e_0
+Adding cell -- xilinx.com:ip:axis_dwidth_converter:1.1 - axis_dwidth_converter_0
+Adding cell -- xilinx.com:ip:axis_dwidth_converter:1.1 - axis_dwidth_converter_1
+Adding cell -- xilinx.com:user:GrayScale_Accel_pipe:2.0 - GrayScale_Accel_pipe_0
+Successfully read diagram <design_1> from BD file <C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project/GrayScale.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 948.070 ; gain = 26.941
+ipx::edit_ip_in_project -upgrade true -name GrayScale_Accel_pipe_v2_0_project -directory {C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado\ Project/GrayScale.tmp/GrayScale_Accel_pipe_v2_0_project} c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_2.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/silvi/documents/projetos/grayscale-accel-pipe/vivado project/grayscale.tmp/grayscale_accel_pipe_v2_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+create_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 973.617 ; gain = 25.547
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_2.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_2.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_2.0/hdl/GrayScale_Accel_pipe_v2_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_2.0/src/axis_fifo_v1_0.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/ip_repo/GrayScale_Accel_pipe_2.0/hdl/GrayScale_Accel_pipe_v2_0.v:]
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 973.617 ; gain = 25.547
+update_compile_order -fileset sources_1
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 22 18:48:26 2021...

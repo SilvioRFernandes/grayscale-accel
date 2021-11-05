@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2020 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2021 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -46,8 +46,8 @@
 // 
 // DO NOT MODIFY THIS FILE.
 
-// IP VLNV: user.org:user:GrayScale_Accel:1.0
-// IP Revision: 8
+// IP VLNV: user.org:user:GrayScale_Accel:2.0
+// IP Revision: 5
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections

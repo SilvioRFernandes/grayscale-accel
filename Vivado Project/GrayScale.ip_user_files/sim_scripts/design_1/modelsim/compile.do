@@ -142,13 +142,6 @@ vlog -work xil_defaultlib -64 -incr "+incdir+../../../../GrayScale.srcs/sources_
 "../../../bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/sim/design_1_zynq_ultra_ps_e_0_0_vip_wrapper.v" \
 "../../../bd/design_1/sim/design_1.v" \
 
-vlog -work xil_defaultlib -64 -incr -sv -L axi_vip_v1_1_4 -L zynq_ultra_ps_e_vip_v1_0_4 -L xilinx_vip "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/00a3/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/8713/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/sim_tlm" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
-"../../../bd/design_1/ipshared/c61f/src/axis_fifo_v1_0.sv" \
-"../../../bd/design_1/ipshared/c61f/hdl/GrayScale_Accel_v2_0.v" \
-
-vlog -work xil_defaultlib -64 -incr "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/00a3/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/8713/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/sim_tlm" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
-"../../../bd/design_1/ip/design_1_GrayScale_Accel_1_0/sim/design_1_GrayScale_Accel_1_0.v" \
-
 vlog -work axis_infrastructure_v1_1_0 -64 -incr "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/00a3/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/8713/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/sim_tlm" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v" \
 
@@ -161,6 +154,14 @@ vlog -work axis_dwidth_converter_v1_1_17 -64 -incr "+incdir+../../../../GrayScal
 vlog -work xil_defaultlib -64 -incr "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/00a3/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/8713/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/sim_tlm" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_axis_dwidth_converter_0_0/sim/design_1_axis_dwidth_converter_0_0.v" \
 "../../../bd/design_1/ip/design_1_axis_dwidth_converter_1_0/sim/design_1_axis_dwidth_converter_1_0.v" \
+
+vlog -work xil_defaultlib -64 -incr -sv -L axi_vip_v1_1_4 -L zynq_ultra_ps_e_vip_v1_0_4 -L xilinx_vip "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/00a3/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/8713/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/sim_tlm" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../bd/design_1/ipshared/d3a3/src/Memory_Map_S00_AXI.sv" \
+"../../../bd/design_1/ipshared/d3a3/src/axis_fifo_v1_0.sv" \
+"../../../bd/design_1/ipshared/d3a3/hdl/GrayScale_Accel_pipe_v3_0.v" \
+
+vlog -work xil_defaultlib -64 -incr "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/00a3/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/8713/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/sim_tlm" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../bd/design_1/ip/design_1_GrayScale_Accel_pipe_1_0/sim/design_1_GrayScale_Accel_pipe_1_0.v" \
 
 vlog -work axi_protocol_converter_v2_1_18 -64 -incr "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/00a3/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/8713/hdl" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/sim_tlm" "+incdir+../../../../GrayScale.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../../GrayScale.srcs/sources_1/bd/design_1/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

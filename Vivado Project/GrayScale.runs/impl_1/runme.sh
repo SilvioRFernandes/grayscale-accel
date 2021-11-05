@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/thor/Documents/ProjetoPesquisa/GitProject/grayscale-accel/Vivado Project/GrayScale.runs/impl_1'
+HD_PWD='C:/Users/silvi/Documents/Projetos/grayscale-accel-pipe/Vivado Project/GrayScale.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log design_1_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
 
 

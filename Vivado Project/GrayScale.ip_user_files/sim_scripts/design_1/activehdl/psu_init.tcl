@@ -156,15 +156,15 @@ set psu_pll_init_data {
 		# PSU_CRL_APB_IOPLL_CTRL_PRE_SRC                                                  0x0
 
 		# The integer portion of the feedback divider to the PLL
-		# PSU_CRL_APB_IOPLL_CTRL_FBDIV                                                    0x5b
+		# PSU_CRL_APB_IOPLL_CTRL_FBDIV                                                    0x5a
 
 		# This turns on the divide by 2 that is inside of the PLL. This does not c
     # hange the VCO frequency, just the output frequency
 		# PSU_CRL_APB_IOPLL_CTRL_DIV2                                                     0x1
 
 		# PLL Basic Control
-		#(OFFSET, MASK, VALUE)      (0XFF5E0020, 0x00717F00U ,0x00015B00U)  */
-    mask_write 0XFF5E0020 0x00717F00 0x00015B00
+		#(OFFSET, MASK, VALUE)      (0XFF5E0020, 0x00717F00U ,0x00015A00U)  */
+    mask_write 0XFF5E0020 0x00717F00 0x00015A00
 		# : BY PASS PLL
 		# Register : IOPLL_CTRL @ 0XFF5E0020</p>
 
@@ -354,15 +354,15 @@ set psu_pll_init_data {
 		# PSU_CRF_APB_DPLL_CTRL_PRE_SRC                                                   0x0
 
 		# The integer portion of the feedback divider to the PLL
-		# PSU_CRF_APB_DPLL_CTRL_FBDIV                                                     0x40
+		# PSU_CRF_APB_DPLL_CTRL_FBDIV                                                     0x3f
 
 		# This turns on the divide by 2 that is inside of the PLL. This does not c
     # hange the VCO frequency, just the output frequency
 		# PSU_CRF_APB_DPLL_CTRL_DIV2                                                      0x1
 
 		# PLL Basic Control
-		#(OFFSET, MASK, VALUE)      (0XFD1A002C, 0x00717F00U ,0x00014000U)  */
-    mask_write 0XFD1A002C 0x00717F00 0x00014000
+		#(OFFSET, MASK, VALUE)      (0XFD1A002C, 0x00717F00U ,0x00013F00U)  */
+    mask_write 0XFD1A002C 0x00717F00 0x00013F00
 		# : BY PASS PLL
 		# Register : DPLL_CTRL @ 0XFD1A002C</p>
 
@@ -535,7 +535,7 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_USB0_BUS_REF_CTRL_DIVISOR1                                          0x1
 
 		# 6 bit divider
-		# PSU_CRL_APB_USB0_BUS_REF_CTRL_DIVISOR0                                          0x7
+		# PSU_CRL_APB_USB0_BUS_REF_CTRL_DIVISOR0                                          0x6
 
 		# 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
     # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
@@ -543,8 +543,8 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_USB0_BUS_REF_CTRL_SRCSEL                                            0x0
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFF5E0060, 0x023F3F07U ,0x02010700U)  */
-    mask_write 0XFF5E0060 0x023F3F07 0x02010700
+		#(OFFSET, MASK, VALUE)      (0XFF5E0060, 0x023F3F07U ,0x02010600U)  */
+    mask_write 0XFF5E0060 0x023F3F07 0x02010600
 		# Register : USB1_BUS_REF_CTRL @ 0XFF5E0064</p>
 
 		# Clock active signal. Switch to 0 to disable the clock
@@ -554,7 +554,7 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_USB1_BUS_REF_CTRL_DIVISOR1                                          0x1
 
 		# 6 bit divider
-		# PSU_CRL_APB_USB1_BUS_REF_CTRL_DIVISOR0                                          0x7
+		# PSU_CRL_APB_USB1_BUS_REF_CTRL_DIVISOR0                                          0x6
 
 		# 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
     # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
@@ -562,18 +562,18 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_USB1_BUS_REF_CTRL_SRCSEL                                            0x0
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFF5E0064, 0x023F3F07U ,0x02010700U)  */
-    mask_write 0XFF5E0064 0x023F3F07 0x02010700
+		#(OFFSET, MASK, VALUE)      (0XFF5E0064, 0x023F3F07U ,0x02010600U)  */
+    mask_write 0XFF5E0064 0x023F3F07 0x02010600
 		# Register : USB3_DUAL_REF_CTRL @ 0XFF5E004C</p>
 
 		# Clock active signal. Switch to 0 to disable the clock
 		# PSU_CRL_APB_USB3_DUAL_REF_CTRL_CLKACT                                           0x1
 
 		# 6 bit divider
-		# PSU_CRL_APB_USB3_DUAL_REF_CTRL_DIVISOR1                                         0x2
+		# PSU_CRL_APB_USB3_DUAL_REF_CTRL_DIVISOR1                                         0x3
 
 		# 6 bit divider
-		# PSU_CRL_APB_USB3_DUAL_REF_CTRL_DIVISOR0                                         0x26
+		# PSU_CRL_APB_USB3_DUAL_REF_CTRL_DIVISOR0                                         0x19
 
 		# 000 = IOPLL; 010 = RPLL; 011 = DPLL. (This signal may only be toggled af
     # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
@@ -581,8 +581,8 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_USB3_DUAL_REF_CTRL_SRCSEL                                           0x0
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFF5E004C, 0x023F3F07U ,0x02022600U)  */
-    mask_write 0XFF5E004C 0x023F3F07 0x02022600
+		#(OFFSET, MASK, VALUE)      (0XFF5E004C, 0x023F3F07U ,0x02031900U)  */
+    mask_write 0XFF5E004C 0x023F3F07 0x02031900
 		# Register : SDIO0_REF_CTRL @ 0XFF5E006C</p>
 
 		# Clock active signal. Switch to 0 to disable the clock
@@ -643,7 +643,7 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_UART0_REF_CTRL_DIVISOR1                                             0x1
 
 		# 6 bit divider
-		# PSU_CRL_APB_UART0_REF_CTRL_DIVISOR0                                             0x10
+		# PSU_CRL_APB_UART0_REF_CTRL_DIVISOR0                                             0xf
 
 		# 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
     # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
@@ -651,8 +651,8 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_UART0_REF_CTRL_SRCSEL                                               0x0
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFF5E0074, 0x013F3F07U ,0x01011000U)  */
-    mask_write 0XFF5E0074 0x013F3F07 0x01011000
+		#(OFFSET, MASK, VALUE)      (0XFF5E0074, 0x013F3F07U ,0x01010F00U)  */
+    mask_write 0XFF5E0074 0x013F3F07 0x01010F00
 		# Register : UART1_REF_CTRL @ 0XFF5E0078</p>
 
 		# Clock active signal. Switch to 0 to disable the clock
@@ -662,7 +662,7 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_UART1_REF_CTRL_DIVISOR1                                             0x1
 
 		# 6 bit divider
-		# PSU_CRL_APB_UART1_REF_CTRL_DIVISOR0                                             0x10
+		# PSU_CRL_APB_UART1_REF_CTRL_DIVISOR0                                             0xf
 
 		# 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
     # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
@@ -670,8 +670,8 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_UART1_REF_CTRL_SRCSEL                                               0x0
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFF5E0078, 0x013F3F07U ,0x01011000U)  */
-    mask_write 0XFF5E0078 0x013F3F07 0x01011000
+		#(OFFSET, MASK, VALUE)      (0XFF5E0078, 0x013F3F07U ,0x01010F00U)  */
+    mask_write 0XFF5E0078 0x013F3F07 0x01010F00
 		# Register : I2C1_REF_CTRL @ 0XFF5E0124</p>
 
 		# Clock active signal. Switch to 0 to disable the clock
@@ -681,7 +681,7 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_I2C1_REF_CTRL_DIVISOR1                                              0x1
 
 		# 6 bit divider
-		# PSU_CRL_APB_I2C1_REF_CTRL_DIVISOR0                                              0x10
+		# PSU_CRL_APB_I2C1_REF_CTRL_DIVISOR0                                              0xf
 
 		# 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
     # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
@@ -689,8 +689,8 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_I2C1_REF_CTRL_SRCSEL                                                0x0
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFF5E0124, 0x013F3F07U ,0x01011000U)  */
-    mask_write 0XFF5E0124 0x013F3F07 0x01011000
+		#(OFFSET, MASK, VALUE)      (0XFF5E0124, 0x013F3F07U ,0x01010F00U)  */
+    mask_write 0XFF5E0124 0x013F3F07 0x01010F00
 		# Register : SPI0_REF_CTRL @ 0XFF5E007C</p>
 
 		# Clock active signal. Switch to 0 to disable the clock
@@ -737,7 +737,7 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_CPU_R5_CTRL_CLKACT                                                  0x1
 
 		# 6 bit divider
-		# PSU_CRL_APB_CPU_R5_CTRL_DIVISOR0                                                0x4
+		# PSU_CRL_APB_CPU_R5_CTRL_DIVISOR0                                                0x3
 
 		# 000 = RPLL; 010 = IOPLL; 011 = DPLL; (This signal may only be toggled af
     # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
@@ -745,15 +745,15 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_CPU_R5_CTRL_SRCSEL                                                  0x2
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFF5E0090, 0x01003F07U ,0x01000402U)  */
-    mask_write 0XFF5E0090 0x01003F07 0x01000402
+		#(OFFSET, MASK, VALUE)      (0XFF5E0090, 0x01003F07U ,0x01000302U)  */
+    mask_write 0XFF5E0090 0x01003F07 0x01000302
 		# Register : IOU_SWITCH_CTRL @ 0XFF5E009C</p>
 
 		# Clock active signal. Switch to 0 to disable the clock
 		# PSU_CRL_APB_IOU_SWITCH_CTRL_CLKACT                                              0x1
 
 		# 6 bit divider
-		# PSU_CRL_APB_IOU_SWITCH_CTRL_DIVISOR0                                            0x7
+		# PSU_CRL_APB_IOU_SWITCH_CTRL_DIVISOR0                                            0x6
 
 		# 000 = RPLL; 010 = IOPLL; 011 = DPLL; (This signal may only be toggled af
     # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
@@ -761,8 +761,8 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_IOU_SWITCH_CTRL_SRCSEL                                              0x2
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFF5E009C, 0x01003F07U ,0x01000702U)  */
-    mask_write 0XFF5E009C 0x01003F07 0x01000702
+		#(OFFSET, MASK, VALUE)      (0XFF5E009C, 0x01003F07U ,0x01000602U)  */
+    mask_write 0XFF5E009C 0x01003F07 0x01000602
 		# Register : PCAP_CTRL @ 0XFF5E00A4</p>
 
 		# Clock active signal. Switch to 0 to disable the clock
@@ -785,7 +785,7 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_LPD_SWITCH_CTRL_CLKACT                                              0x1
 
 		# 6 bit divider
-		# PSU_CRL_APB_LPD_SWITCH_CTRL_DIVISOR0                                            0x4
+		# PSU_CRL_APB_LPD_SWITCH_CTRL_DIVISOR0                                            0x3
 
 		# 000 = RPLL; 010 = IOPLL; 011 = DPLL; (This signal may only be toggled af
     # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
@@ -793,15 +793,15 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_LPD_SWITCH_CTRL_SRCSEL                                              0x2
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFF5E00A8, 0x01003F07U ,0x01000402U)  */
-    mask_write 0XFF5E00A8 0x01003F07 0x01000402
+		#(OFFSET, MASK, VALUE)      (0XFF5E00A8, 0x01003F07U ,0x01000302U)  */
+    mask_write 0XFF5E00A8 0x01003F07 0x01000302
 		# Register : LPD_LSBUS_CTRL @ 0XFF5E00AC</p>
 
 		# Clock active signal. Switch to 0 to disable the clock
 		# PSU_CRL_APB_LPD_LSBUS_CTRL_CLKACT                                               0x1
 
 		# 6 bit divider
-		# PSU_CRL_APB_LPD_LSBUS_CTRL_DIVISOR0                                             0x10
+		# PSU_CRL_APB_LPD_LSBUS_CTRL_DIVISOR0                                             0xf
 
 		# 000 = RPLL; 010 = IOPLL; 011 = DPLL; (This signal may only be toggled af
     # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
@@ -809,15 +809,15 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_LPD_LSBUS_CTRL_SRCSEL                                               0x2
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFF5E00AC, 0x01003F07U ,0x01001002U)  */
-    mask_write 0XFF5E00AC 0x01003F07 0x01001002
+		#(OFFSET, MASK, VALUE)      (0XFF5E00AC, 0x01003F07U ,0x01000F02U)  */
+    mask_write 0XFF5E00AC 0x01003F07 0x01000F02
 		# Register : DBG_LPD_CTRL @ 0XFF5E00B0</p>
 
 		# Clock active signal. Switch to 0 to disable the clock
 		# PSU_CRL_APB_DBG_LPD_CTRL_CLKACT                                                 0x1
 
 		# 6 bit divider
-		# PSU_CRL_APB_DBG_LPD_CTRL_DIVISOR0                                               0x7
+		# PSU_CRL_APB_DBG_LPD_CTRL_DIVISOR0                                               0x6
 
 		# 000 = RPLL; 010 = IOPLL; 011 = DPLL; (This signal may only be toggled af
     # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
@@ -825,15 +825,15 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_DBG_LPD_CTRL_SRCSEL                                                 0x2
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFF5E00B0, 0x01003F07U ,0x01000702U)  */
-    mask_write 0XFF5E00B0 0x01003F07 0x01000702
+		#(OFFSET, MASK, VALUE)      (0XFF5E00B0, 0x01003F07U ,0x01000602U)  */
+    mask_write 0XFF5E00B0 0x01003F07 0x01000602
 		# Register : ADMA_REF_CTRL @ 0XFF5E00B8</p>
 
 		# Clock active signal. Switch to 0 to disable the clock
 		# PSU_CRL_APB_ADMA_REF_CTRL_CLKACT                                                0x1
 
 		# 6 bit divider
-		# PSU_CRL_APB_ADMA_REF_CTRL_DIVISOR0                                              0x4
+		# PSU_CRL_APB_ADMA_REF_CTRL_DIVISOR0                                              0x3
 
 		# 000 = RPLL; 010 = IOPLL; 011 = DPLL; (This signal may only be toggled af
     # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
@@ -841,8 +841,8 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_ADMA_REF_CTRL_SRCSEL                                                0x2
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFF5E00B8, 0x01003F07U ,0x01000402U)  */
-    mask_write 0XFF5E00B8 0x01003F07 0x01000402
+		#(OFFSET, MASK, VALUE)      (0XFF5E00B8, 0x01003F07U ,0x01000302U)  */
+    mask_write 0XFF5E00B8 0x01003F07 0x01000302
 		# Register : PL0_REF_CTRL @ 0XFF5E00C0</p>
 
 		# Clock active signal. Switch to 0 to disable the clock
@@ -852,7 +852,7 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_PL0_REF_CTRL_DIVISOR1                                               0x1
 
 		# 6 bit divider
-		# PSU_CRL_APB_PL0_REF_CTRL_DIVISOR0                                               0x10
+		# PSU_CRL_APB_PL0_REF_CTRL_DIVISOR0                                               0xf
 
 		# 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may only be toggled af
     # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
@@ -860,15 +860,15 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_PL0_REF_CTRL_SRCSEL                                                 0x0
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFF5E00C0, 0x013F3F07U ,0x01011000U)  */
-    mask_write 0XFF5E00C0 0x013F3F07 0x01011000
+		#(OFFSET, MASK, VALUE)      (0XFF5E00C0, 0x013F3F07U ,0x01010F00U)  */
+    mask_write 0XFF5E00C0 0x013F3F07 0x01010F00
 		# Register : AMS_REF_CTRL @ 0XFF5E0108</p>
 
 		# 6 bit divider
 		# PSU_CRL_APB_AMS_REF_CTRL_DIVISOR1                                               0x1
 
 		# 6 bit divider
-		# PSU_CRL_APB_AMS_REF_CTRL_DIVISOR0                                               0x1f
+		# PSU_CRL_APB_AMS_REF_CTRL_DIVISOR0                                               0x1e
 
 		# 000 = RPLL; 010 = IOPLL; 011 = DPLL; (This signal may only be toggled af
     # ter 4 cycles of the old clock and 4 cycles of the new clock. This is not
@@ -879,8 +879,8 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_AMS_REF_CTRL_CLKACT                                                 0x1
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFF5E0108, 0x013F3F07U ,0x01011F02U)  */
-    mask_write 0XFF5E0108 0x013F3F07 0x01011F02
+		#(OFFSET, MASK, VALUE)      (0XFF5E0108, 0x013F3F07U ,0x01011E02U)  */
+    mask_write 0XFF5E0108 0x013F3F07 0x01011E02
 		# Register : DLL_REF_CTRL @ 0XFF5E0104</p>
 
 		# 000 = IOPLL; 001 = RPLL; (This signal may only be toggled after 4 cycles
@@ -894,7 +894,7 @@ set psu_clock_init_data {
 		# Register : TIMESTAMP_REF_CTRL @ 0XFF5E0128</p>
 
 		# 6 bit divider
-		# PSU_CRL_APB_TIMESTAMP_REF_CTRL_DIVISOR0                                         0x10
+		# PSU_CRL_APB_TIMESTAMP_REF_CTRL_DIVISOR0                                         0xf
 
 		# 1XX = pss_ref_clk; 000 = IOPLL; 010 = RPLL; 011 = DPLL; (This signal may
     #  only be toggled after 4 cycles of the old clock and 4 cycles of the new
@@ -905,8 +905,8 @@ set psu_clock_init_data {
 		# PSU_CRL_APB_TIMESTAMP_REF_CTRL_CLKACT                                           0x1
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFF5E0128, 0x01003F07U ,0x01001000U)  */
-    mask_write 0XFF5E0128 0x01003F07 0x01001000
+		#(OFFSET, MASK, VALUE)      (0XFF5E0128, 0x01003F07U ,0x01000F00U)  */
+    mask_write 0XFF5E0128 0x01003F07 0x01000F00
 		# Register : DP_VIDEO_REF_CTRL @ 0XFD1A0070</p>
 
 		# 6 bit divider
@@ -990,7 +990,7 @@ set psu_clock_init_data {
 		# Register : DBG_FPD_CTRL @ 0XFD1A0068</p>
 
 		# 6 bit divider
-		# PSU_CRF_APB_DBG_FPD_CTRL_DIVISOR0                                               0x3
+		# PSU_CRF_APB_DBG_FPD_CTRL_DIVISOR0                                               0x2
 
 		# 000 = IOPLL_TO_FPD; 010 = DPLL; 011 = APLL; (This signal may only be tog
     # gled after 4 cycles of the old clock and 4 cycles of the new clock. This
@@ -1001,8 +1001,8 @@ set psu_clock_init_data {
 		# PSU_CRF_APB_DBG_FPD_CTRL_CLKACT                                                 0x1
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFD1A0068, 0x01003F07U ,0x01000300U)  */
-    mask_write 0XFD1A0068 0x01003F07 0x01000300
+		#(OFFSET, MASK, VALUE)      (0XFD1A0068, 0x01003F07U ,0x01000200U)  */
+    mask_write 0XFD1A0068 0x01003F07 0x01000200
 		# Register : DDR_CTRL @ 0XFD1A0080</p>
 
 		# 6 bit divider
@@ -1019,7 +1019,7 @@ set psu_clock_init_data {
 		# Register : GPU_REF_CTRL @ 0XFD1A0084</p>
 
 		# 6 bit divider
-		# PSU_CRF_APB_GPU_REF_CTRL_DIVISOR0                                               0x2
+		# PSU_CRF_APB_GPU_REF_CTRL_DIVISOR0                                               0x1
 
 		# 000 = IOPLL_TO_FPD; 010 = VPLL; 011 = DPLL; (This signal may only be tog
     # gled after 4 cycles of the old clock and 4 cycles of the new clock. This
@@ -1039,8 +1039,8 @@ set psu_clock_init_data {
 		# PSU_CRF_APB_GPU_REF_CTRL_PP1_CLKACT                                             0x1
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFD1A0084, 0x07003F07U ,0x07000200U)  */
-    mask_write 0XFD1A0084 0x07003F07 0x07000200
+		#(OFFSET, MASK, VALUE)      (0XFD1A0084, 0x07003F07U ,0x07000100U)  */
+    mask_write 0XFD1A0084 0x07003F07 0x07000100
 		# Register : GDMA_REF_CTRL @ 0XFD1A00B8</p>
 
 		# 6 bit divider
@@ -1092,7 +1092,7 @@ set psu_clock_init_data {
 		# Register : TOPSW_LSBUS_CTRL @ 0XFD1A00C4</p>
 
 		# 6 bit divider
-		# PSU_CRF_APB_TOPSW_LSBUS_CTRL_DIVISOR0                                           0x6
+		# PSU_CRF_APB_TOPSW_LSBUS_CTRL_DIVISOR0                                           0x5
 
 		# 000 = APLL; 010 = IOPLL_TO_FPD; 011 = DPLL; (This signal may only be tog
     # gled after 4 cycles of the old clock and 4 cycles of the new clock. This
@@ -1103,12 +1103,12 @@ set psu_clock_init_data {
 		# PSU_CRF_APB_TOPSW_LSBUS_CTRL_CLKACT                                             0x1
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFD1A00C4, 0x01003F07U ,0x01000602U)  */
-    mask_write 0XFD1A00C4 0x01003F07 0x01000602
+		#(OFFSET, MASK, VALUE)      (0XFD1A00C4, 0x01003F07U ,0x01000502U)  */
+    mask_write 0XFD1A00C4 0x01003F07 0x01000502
 		# Register : DBG_TSTMP_CTRL @ 0XFD1A00F8</p>
 
 		# 6 bit divider
-		# PSU_CRF_APB_DBG_TSTMP_CTRL_DIVISOR0                                             0x3
+		# PSU_CRF_APB_DBG_TSTMP_CTRL_DIVISOR0                                             0x2
 
 		# 000 = IOPLL_TO_FPD; 010 = DPLL; 011 = APLL; (This signal may only be tog
     # gled after 4 cycles of the old clock and 4 cycles of the new clock. This
@@ -1116,8 +1116,8 @@ set psu_clock_init_data {
 		# PSU_CRF_APB_DBG_TSTMP_CTRL_SRCSEL                                               0x0
 
 		# This register controls this reference clock
-		#(OFFSET, MASK, VALUE)      (0XFD1A00F8, 0x00003F07U ,0x00000300U)  */
-    mask_write 0XFD1A00F8 0x00003F07 0x00000300
+		#(OFFSET, MASK, VALUE)      (0XFD1A00F8, 0x00003F07U ,0x00000200U)  */
+    mask_write 0XFD1A00F8 0x00003F07 0x00000200
 		# Register : IOU_TTC_APB_CLK @ 0XFF180380</p>
 
 		# 00" = Select the APB switch clock for the APB interface of TTC0'01" = Se
@@ -1367,11 +1367,11 @@ set psu_ddr_init_data {
 		# Interval between two MR4 reads, used to derate the timing parameters. Pr
     # esent only in designs configured to support LPDDR2/LPDDR3/LPDDR4. This r
     # egister must not be set to zero
-		# PSU_DDRC_DERATEINT_MR4_READ_INTERVAL                                            0x284880
+		# PSU_DDRC_DERATEINT_MR4_READ_INTERVAL                                            0x280de8
 
 		# Temperature Derate Interval Register
-		#(OFFSET, MASK, VALUE)      (0XFD070024, 0xFFFFFFFFU ,0x00284880U)  */
-    mask_write 0XFD070024 0xFFFFFFFF 0x00284880
+		#(OFFSET, MASK, VALUE)      (0XFD070024, 0xFFFFFFFFU ,0x00280DE8U)  */
+    mask_write 0XFD070024 0xFFFFFFFF 0x00280DE8
 		# Register : PWRCTL @ 0XFD070030</p>
 
 		# Self refresh state is an intermediate state to enter to Self refresh pow
@@ -1762,11 +1762,11 @@ set psu_ddr_init_data {
     # DR3: tINIT1 of 100 ns (min) LPDDR4: tINIT3 of 2 ms (min) For configurati
     # ons with MEMC_FREQ_RATIO=2, program this to JEDEC spec value divided by
     # 2, and round it up to next integer value.
-		# PSU_DDRC_INIT0_PRE_CKE_X1024                                                    0x205
+		# PSU_DDRC_INIT0_PRE_CKE_X1024                                                    0x202
 
 		# SDRAM Initialization Register 0
-		#(OFFSET, MASK, VALUE)      (0XFD0700D0, 0xC3FF0FFFU ,0x00020205U)  */
-    mask_write 0XFD0700D0 0xC3FF0FFF 0x00020205
+		#(OFFSET, MASK, VALUE)      (0XFD0700D0, 0xC3FF0FFFU ,0x00020202U)  */
+    mask_write 0XFD0700D0 0xC3FF0FFF 0x00020202
 		# Register : INIT1 @ 0XFD0700D4</p>
 
 		# Number of cycles to assert SDRAM reset signal during init sequence. This
@@ -2435,7 +2435,7 @@ set psu_ddr_init_data {
     # e next integer value. LPDDR4: program this to tZQCAL/2 and round it up t
     # o the next integer value. Unit: Clock cycles. This is only present for d
     # esigns supporting DDR3/DDR4 or LPDDR2/LPDDR3/LPDDR4 devices.
-		# PSU_DDRC_ZQCTL0_T_ZQ_LONG_NOP                                                   0x108
+		# PSU_DDRC_ZQCTL0_T_ZQ_LONG_NOP                                                   0x107
 
 		# tZQCS for DDR3/DD4/LPDDR2/LPDDR3, tZQLAT for LPDDR4: Number of cycles of
     #  NOP required after a ZQCS (ZQ calibration short)/MPC(ZQ Latch) command
@@ -2446,8 +2446,8 @@ set psu_ddr_init_data {
 		# PSU_DDRC_ZQCTL0_T_ZQ_SHORT_NOP                                                  0x8
 
 		# ZQ Control Register 0
-		#(OFFSET, MASK, VALUE)      (0XFD070180, 0xF7FF03FFU ,0x81080008U)  */
-    mask_write 0XFD070180 0xF7FF03FF 0x81080008
+		#(OFFSET, MASK, VALUE)      (0XFD070180, 0xF7FF03FFU ,0x81070008U)  */
+    mask_write 0XFD070180 0xF7FF03FF 0x81070008
 		# Register : ZQCTL1 @ 0XFD070184</p>
 
 		# tZQReset: Number of cycles of NOP required after a ZQReset (ZQ calibrati
@@ -2462,11 +2462,11 @@ set psu_ddr_init_data {
     # 4 devices. Meaningless, if ZQCTL0.dis_auto_zq=1. Unit: 1024 clock cycles
     # . This is only present for designs supporting DDR3/DDR4 or LPDDR2/LPDDR3
     # /LPDDR4 devices.
-		# PSU_DDRC_ZQCTL1_T_ZQ_SHORT_INTERVAL_X1024                                       0x325aa
+		# PSU_DDRC_ZQCTL1_T_ZQ_SHORT_INTERVAL_X1024                                       0x32116
 
 		# ZQ Control Register 1
-		#(OFFSET, MASK, VALUE)      (0XFD070184, 0x3FFFFFFFU ,0x00E325AAU)  */
-    mask_write 0XFD070184 0x3FFFFFFF 0x00E325AA
+		#(OFFSET, MASK, VALUE)      (0XFD070184, 0x3FFFFFFFU ,0x00E32116U)  */
+    mask_write 0XFD070184 0x3FFFFFFF 0x00E32116
 		# Register : DFITMG0 @ 0XFD070190</p>
 
 		# Specifies the number of DFI clock cycles after an assertion or de-assert
@@ -4536,11 +4536,11 @@ set psu_ddr_init_data {
 		# PSU_DDR_PHY_PGCR2_PLLFSMBYP                                                     0x0
 
 		# Refresh Period
-		# PSU_DDR_PHY_PGCR2_TREFPRD                                                       0x3c80
+		# PSU_DDR_PHY_PGCR2_TREFPRD                                                       0x3c20
 
 		# PHY General Configuration Register 2
-		#(OFFSET, MASK, VALUE)      (0XFD080018, 0xFFFFFFFFU ,0x00F03C80U)  */
-    mask_write 0XFD080018 0xFFFFFFFF 0x00F03C80
+		#(OFFSET, MASK, VALUE)      (0XFD080018, 0xFFFFFFFFU ,0x00F03C20U)  */
+    mask_write 0XFD080018 0xFFFFFFFF 0x00F03C20
 		# Register : PGCR3 @ 0XFD08001C</p>
 
 		# CKN Enable
@@ -4614,31 +4614,31 @@ set psu_ddr_init_data {
 		# Register : PTR0 @ 0XFD080040</p>
 
 		# PLL Power-Down Time
-		# PSU_DDR_PHY_PTR0_TPLLPD                                                         0x108
+		# PSU_DDR_PHY_PTR0_TPLLPD                                                         0x107
 
 		# PLL Gear Shift Time
-		# PSU_DDR_PHY_PTR0_TPLLGS                                                         0x420
+		# PSU_DDR_PHY_PTR0_TPLLGS                                                         0x41a
 
 		# PHY Reset Time
 		# PSU_DDR_PHY_PTR0_TPHYRST                                                        0x10
 
 		# PHY Timing Register 0
-		#(OFFSET, MASK, VALUE)      (0XFD080040, 0xFFFFFFFFU ,0x21010810U)  */
-    mask_write 0XFD080040 0xFFFFFFFF 0x21010810
+		#(OFFSET, MASK, VALUE)      (0XFD080040, 0xFFFFFFFFU ,0x20E10690U)  */
+    mask_write 0XFD080040 0xFFFFFFFF 0x20E10690
 		# Register : PTR1 @ 0XFD080044</p>
 
 		# PLL Lock Time
-		# PSU_DDR_PHY_PTR1_TPLLLOCK                                                       0x6720
+		# PSU_DDR_PHY_PTR1_TPLLLOCK                                                       0x668a
 
 		# Reserved. Returns zeroes on reads.
 		# PSU_DDR_PHY_PTR1_RESERVED_15_13                                                 0x0
 
 		# PLL Reset Time
-		# PSU_DDR_PHY_PTR1_TPLLRST                                                        0x948
+		# PSU_DDR_PHY_PTR1_TPLLRST                                                        0x93b
 
 		# PHY Timing Register 1
-		#(OFFSET, MASK, VALUE)      (0XFD080044, 0xFFFFFFFFU ,0x67200948U)  */
-    mask_write 0XFD080044 0xFFFFFFFF 0x67200948
+		#(OFFSET, MASK, VALUE)      (0XFD080044, 0xFFFFFFFFU ,0x668A093BU)  */
+    mask_write 0XFD080044 0xFFFFFFFF 0x668A093B
 		# Register : PLLCR0 @ 0XFD080068</p>
 
 		# PLL Bypass
@@ -4849,7 +4849,7 @@ set psu_ddr_init_data {
 		# PSU_DDR_PHY_DTPR1_RESERVED_23                                                   0x0
 
 		# 4-bank activate period
-		# PSU_DDR_PHY_DTPR1_TFAW                                                          0x16
+		# PSU_DDR_PHY_DTPR1_TFAW                                                          0x15
 
 		# Reserved. Return zeroes on reads.
 		# PSU_DDR_PHY_DTPR1_RESERVED_15_11                                                0x0
@@ -4864,8 +4864,8 @@ set psu_ddr_init_data {
 		# PSU_DDR_PHY_DTPR1_TMRD                                                          0xa
 
 		# DRAM Timing Parameters Register 1
-		#(OFFSET, MASK, VALUE)      (0XFD080114, 0xFFFFFFFFU ,0x2816050AU)  */
-    mask_write 0XFD080114 0xFFFFFFFF 0x2816050A
+		#(OFFSET, MASK, VALUE)      (0XFD080114, 0xFFFFFFFFU ,0x2815050AU)  */
+    mask_write 0XFD080114 0xFFFFFFFF 0x2815050A
 		# Register : DTPR2 @ 0XFD080118</p>
 
 		# Reserved. Return zeroes on reads.
@@ -4890,11 +4890,11 @@ set psu_ddr_init_data {
 		# PSU_DDR_PHY_DTPR2_RESERVED_15_10                                                0x0
 
 		# Self refresh exit delay
-		# PSU_DDR_PHY_DTPR2_TXS                                                           0x98
+		# PSU_DDR_PHY_DTPR2_TXS                                                           0x97
 
 		# DRAM Timing Parameters Register 2
-		#(OFFSET, MASK, VALUE)      (0XFD080118, 0xFFFFFFFFU ,0x000F0098U)  */
-    mask_write 0XFD080118 0xFFFFFFFF 0x000F0098
+		#(OFFSET, MASK, VALUE)      (0XFD080118, 0xFFFFFFFFU ,0x000F0097U)  */
+    mask_write 0XFD080118 0xFFFFFFFF 0x000F0097
 		# Register : DTPR3 @ 0XFD08011C</p>
 
 		# ODT turn-off delay extension
@@ -4933,7 +4933,7 @@ set psu_ddr_init_data {
 		# PSU_DDR_PHY_DTPR4_RESERVED_27_26                                                0x0
 
 		# Refresh-to-Refresh
-		# PSU_DDR_PHY_DTPR4_TRFC                                                          0x94
+		# PSU_DDR_PHY_DTPR4_TRFC                                                          0x93
 
 		# Reserved. Return zeroes on reads.
 		# PSU_DDR_PHY_DTPR4_RESERVED_15_14                                                0x0
@@ -4948,8 +4948,8 @@ set psu_ddr_init_data {
 		# PSU_DDR_PHY_DTPR4_TXP                                                           0x8
 
 		# DRAM Timing Parameters Register 4
-		#(OFFSET, MASK, VALUE)      (0XFD080120, 0xFFFFFFFFU ,0x00942B08U)  */
-    mask_write 0XFD080120 0xFFFFFFFF 0x00942B08
+		#(OFFSET, MASK, VALUE)      (0XFD080120, 0xFFFFFFFFU ,0x00932B08U)  */
+    mask_write 0XFD080120 0xFFFFFFFF 0x00932B08
 		# Register : DTPR5 @ 0XFD080124</p>
 
 		# Reserved. Return zeroes on reads.
@@ -14247,20 +14247,20 @@ set psu_peripherals_init_data {
 		# Register : Baud_rate_divider_reg0 @ 0XFF000034</p>
 
 		# Baud rate divider value: 0 - 3: ignored 4 - 255: Baud rate
-		# PSU_UART0_BAUD_RATE_DIVIDER_REG0_BDIV                                           0xc
+		# PSU_UART0_BAUD_RATE_DIVIDER_REG0_BDIV                                           0x6
 
 		# Baud Rate Divider Register
-		#(OFFSET, MASK, VALUE)      (0XFF000034, 0x000000FFU ,0x0000000CU)  */
-    mask_write 0XFF000034 0x000000FF 0x0000000C
+		#(OFFSET, MASK, VALUE)      (0XFF000034, 0x000000FFU ,0x00000006U)  */
+    mask_write 0XFF000034 0x000000FF 0x00000006
 		# Register : Baud_rate_gen_reg0 @ 0XFF000018</p>
 
 		# Baud Rate Clock Divisor Value: 0: Disables baud_sample 1: Clock divisor
     # bypass (baud_sample = sel_clk) 2 - 65535: baud_sample
-		# PSU_UART0_BAUD_RATE_GEN_REG0_CD                                                 0x3e
+		# PSU_UART0_BAUD_RATE_GEN_REG0_CD                                                 0x7c
 
 		# Baud Rate Generator Register.
-		#(OFFSET, MASK, VALUE)      (0XFF000018, 0x0000FFFFU ,0x0000003EU)  */
-    mask_write 0XFF000018 0x0000FFFF 0x0000003E
+		#(OFFSET, MASK, VALUE)      (0XFF000018, 0x0000FFFFU ,0x0000007CU)  */
+    mask_write 0XFF000018 0x0000FFFF 0x0000007C
 		# Register : Control_reg0 @ 0XFF000000</p>
 
 		# Stop transmitter break: 0: no affect 1: stop transmission of the break a
@@ -14337,20 +14337,20 @@ set psu_peripherals_init_data {
 		# Register : Baud_rate_divider_reg0 @ 0XFF010034</p>
 
 		# Baud rate divider value: 0 - 3: ignored 4 - 255: Baud rate
-		# PSU_UART1_BAUD_RATE_DIVIDER_REG0_BDIV                                           0xc
+		# PSU_UART1_BAUD_RATE_DIVIDER_REG0_BDIV                                           0x6
 
 		# Baud Rate Divider Register
-		#(OFFSET, MASK, VALUE)      (0XFF010034, 0x000000FFU ,0x0000000CU)  */
-    mask_write 0XFF010034 0x000000FF 0x0000000C
+		#(OFFSET, MASK, VALUE)      (0XFF010034, 0x000000FFU ,0x00000006U)  */
+    mask_write 0XFF010034 0x000000FF 0x00000006
 		# Register : Baud_rate_gen_reg0 @ 0XFF010018</p>
 
 		# Baud Rate Clock Divisor Value: 0: Disables baud_sample 1: Clock divisor
     # bypass (baud_sample = sel_clk) 2 - 65535: baud_sample
-		# PSU_UART1_BAUD_RATE_GEN_REG0_CD                                                 0x3e
+		# PSU_UART1_BAUD_RATE_GEN_REG0_CD                                                 0x7c
 
 		# Baud Rate Generator Register.
-		#(OFFSET, MASK, VALUE)      (0XFF010018, 0x0000FFFFU ,0x0000003EU)  */
-    mask_write 0XFF010018 0x0000FFFF 0x0000003E
+		#(OFFSET, MASK, VALUE)      (0XFF010018, 0x0000FFFFU ,0x0000007CU)  */
+    mask_write 0XFF010018 0x0000FFFF 0x0000007C
 		# Register : Control_reg0 @ 0XFF010000</p>
 
 		# Stop transmitter break: 0: no affect 1: stop transmission of the break a
@@ -14521,14 +14521,14 @@ set psu_peripherals_init_data {
 
 		# Frequency in number of ticks per second. Valid range from 10 MHz to 100
     # MHz.
-		# PSU_IOU_SCNTRS_BASE_FREQUENCY_ID_REGISTER_FREQ                                  0x597f128
+		# PSU_IOU_SCNTRS_BASE_FREQUENCY_ID_REGISTER_FREQ                                  0x5f5e100
 
 		# Program this register to match the clock frequency of the timestamp gene
     # rator, in ticks per second. For example, for a 50 MHz clock, program 0x0
     # 2FAF080. This register is not accessible to the read-only programming in
     # terface.
-		#(OFFSET, MASK, VALUE)      (0XFF260020, 0xFFFFFFFFU ,0x0597F128U)  */
-    mask_write 0XFF260020 0xFFFFFFFF 0x0597F128
+		#(OFFSET, MASK, VALUE)      (0XFF260020, 0xFFFFFFFFU ,0x05F5E100U)  */
+    mask_write 0XFF260020 0xFFFFFFFF 0x05F5E100
 		# Register : counter_control_register @ 0XFF260000</p>
 
 		# Enable 0: The counter is disabled and not incrementing. 1: The counter i
@@ -17444,7 +17444,7 @@ poll 0xFD080030 0x00008FFF 0x00008FFF
     
   #Poll PUB_PGSR0 for Trng complete  
 
-mwr -force  0xFD070180 0x01080008
+mwr -force  0xFD070180 0x01070008
 mwr -force  0xFD070060 0x00000000
 	psu_mask_write 0xFD070020 0x00000001 0x00000001
 	psu_mask_write 0xFD080014 0x00000040 0x00000000
