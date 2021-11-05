@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER GrayScale_Accel_pipe
+	OPTION supported_peripherals = (GrayScale_Accel_pipe);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = GrayScale_Accel_pipe;
+END DRIVER
